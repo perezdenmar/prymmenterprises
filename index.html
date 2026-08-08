@@ -1,411 +1,529 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="Prymm Enterprises is a trusted importer and distributor of industrial equipment, agricultural machinery, medical instruments, electronics, and wholesale essentials since 2017.">
-<meta name="theme-color" content="#0b0d17">
-<title>Prymm Enterprises | Precision Distribution Since 2017</title>
-<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-<style>
-:root,[data-theme="light"]{
-  --font-display:'Cabinet Grotesk','Arial Black','Helvetica Neue',sans-serif;
-  --font-body:'Satoshi','Inter','Helvetica Neue',sans-serif;
-  --text-xs:clamp(.75rem,.72rem + .18vw,.875rem);
-  --text-sm:clamp(.875rem,.84rem + .2vw,1rem);
-  --text-base:clamp(1rem,.96rem + .2vw,1.125rem);
-  --text-lg:clamp(1.125rem,1rem + .6vw,1.5rem);
-  --text-xl:clamp(1.5rem,1.15rem + 1.3vw,2.25rem);
-  --text-2xl:clamp(2.4rem,1.6rem + 3.4vw,4.75rem);
-  --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;
-  --ink:#0b0d17;
-  --paper:#f4f1ea;
-  --paper-2:#ece6d9;
-  --paper-3:#e3dccd;
-  --cobalt:#1d3ff2;
-  --gold:#e6a417;
-  --coral:#ff5d3d;
-  --teal:#00b3a4;
-  --line:rgba(11,13,23,.14);
-  --line-strong:#0b0d17;
-  --text:#0b0d17;
-  --text-muted:#474d5f;
-  --text-inverse:#f4f1ea;
-  --surface:#ffffff;
-  --surface-dark:#111421;
-  --shadow-sm:0 8px 24px rgba(11,13,23,.08);
-  --shadow-md:0 18px 48px rgba(11,13,23,.12);
-  --radius:1.25rem;
-  --radius-sm:.75rem;
-  --max:1200px;
-  --header-h:76px;
-}
-[data-theme="dark"]{
-  --ink:#f4f1ea;
-  --paper:#0d111b;
-  --paper-2:#111624;
-  --paper-3:#171d2b;
-  --line:rgba(244,241,234,.12);
-  --line-strong:#f4f1ea;
-  --text:#f4f1ea;
-  --text-muted:#b9becb;
-  --text-inverse:#0d111b;
-  --surface:#131a28;
-  --surface-dark:#05070d;
-  --shadow-sm:0 10px 26px rgba(0,0,0,.28);
-  --shadow-md:0 20px 56px rgba(0,0,0,.34);
-}
-*,:before,:after{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:none;text-size-adjust:none;scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + var(--space-4));}
-body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.6;background:var(--paper);color:var(--text);overflow-x:hidden}
-a,button,input,textarea,select{-webkit-tap-highlight-color:transparent}
-img,svg{display:block;max-width:100%;height:auto}
-button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
-a{text-decoration:none;color:inherit}
-p{max-width:68ch;color:var(--text-muted)}
-h1,h2,h3,h4{font-family:var(--font-display);line-height:.98;text-wrap:balance;text-transform:uppercase;letter-spacing:-.03em;color:var(--text)}
-:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:var(--radius-sm)}
-.skip-link{position:absolute;left:var(--space-4);top:-120px;background:var(--cobalt);color:#fff;padding:var(--space-3) var(--space-4);z-index:1000;border-radius:var(--radius-sm);font-weight:700}
-.skip-link:focus{top:var(--space-4)}
-.grid-overlay{position:fixed;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:40px 40px;opacity:.38;pointer-events:none;z-index:0;mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 85%)}
-.container{width:min(calc(100% - 2*var(--space-4)),var(--max));margin-inline:auto;position:relative;z-index:1}
-.section{position:relative;padding:clamp(var(--space-16),12vw,var(--space-24)) 0;border-bottom:2px solid var(--line-strong);overflow:hidden}
-.section:last-of-type{border-bottom:none}
-.header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(18px);border-bottom:2px solid var(--line-strong);padding-top:max(env(safe-area-inset-top),0px)}
-.header-inner{min-height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
-.brand{display:flex;align-items:center;gap:var(--space-3);min-width:0}
-.brand-mark{width:42px;height:42px;border:2px solid var(--line-strong);background:linear-gradient(135deg,var(--cobalt) 0 50%,var(--gold) 50% 100%);box-shadow:var(--shadow-sm);flex:none}
-.brand-text{display:flex;flex-direction:column;line-height:1}
-.brand-name{font-family:var(--font-display);font-size:var(--text-sm);font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-.brand-sub{font-size:var(--text-xs);color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase}
-.header-actions{display:flex;align-items:center;gap:var(--space-2)}
-.theme-toggle,.menu-toggle{min-width:44px;min-height:44px;display:grid;place-items:center;border:2px solid var(--line-strong);background:var(--surface);box-shadow:var(--shadow-sm);border-radius:var(--radius-sm)}
-.theme-toggle svg,.menu-toggle svg{width:18px;height:18px}
-.nav-panel{position:fixed;top:calc(var(--header-h) + env(safe-area-inset-top));left:0;right:0;background:color-mix(in srgb,var(--paper) 97%,transparent);border-bottom:2px solid var(--line-strong);padding:var(--space-4);display:none;z-index:45}
-.nav-panel.open{display:block}
-.nav-list{display:grid;gap:var(--space-2);list-style:none}
-.nav-link,.nav-cta{min-height:48px;display:flex;align-items:center;justify-content:center;border:2px solid var(--line-strong);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--surface)}
-.nav-cta{background:var(--ink);color:var(--text-inverse)}
-.nav-link:active,.nav-cta:active,.btn:active,.theme-toggle:active,.menu-toggle:active{transform:translateY(1px) scale(.99)}
-.desktop-nav{display:none;align-items:center;gap:var(--space-3)}
-.desktop-nav a{font-size:var(--text-sm);font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:var(--space-3) var(--space-4);border-radius:999px}
-.desktop-nav a:hover{background:color-mix(in srgb,var(--paper-3) 65%,transparent)}
-.desktop-nav .desk-cta{background:var(--ink);color:var(--text-inverse);border:2px solid var(--line-strong);border-radius:999px}
-.hero{min-height:calc(100dvh - var(--header-h));display:flex;align-items:center;padding-top:var(--space-8)}
-.hero-grid{display:grid;gap:var(--space-8);align-items:end}
-.hero-copy{position:relative;z-index:1}
-.tag{display:inline-flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-4);font-size:var(--text-xs);font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:var(--gold);border:2px solid var(--line-strong);box-shadow:var(--shadow-sm);margin-bottom:var(--space-6);color:#0b0d17}
-.hero h1{font-size:var(--text-2xl);max-width:12ch}
-.hero .accent{color:var(--cobalt)}
-.lead{margin-top:var(--space-5);font-size:var(--text-base);max-width:34rem}
-.hero-actions{display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-6)}
-.btn{min-height:52px;padding:0 var(--space-5);display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--line-strong);font-size:var(--text-sm);font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;box-shadow:var(--shadow-sm)}
-.btn-primary{background:var(--ink);color:var(--text-inverse)}
-.btn-secondary{background:var(--surface);color:var(--text)}
-.hero-visual{position:relative;min-height:320px;border:2px solid var(--line-strong);background:linear-gradient(180deg,var(--paper-2),var(--paper-3));box-shadow:var(--shadow-md);overflow:hidden;border-radius:var(--radius)}
-.geo-card{position:absolute;border:2px solid var(--line-strong);box-shadow:var(--shadow-sm)}
-.geo-a{inset:12% 48% 42% 8%;background:var(--cobalt)}
-.geo-b{inset:26% 12% 20% 54%;background:var(--gold)}
-.geo-c{width:120px;height:120px;border-radius:50%;background:var(--teal);bottom:10%;left:12%}
-.geo-d{width:0;height:0;border-left:72px solid transparent;border-right:72px solid transparent;border-bottom:128px solid var(--coral);top:12%;right:12%;box-shadow:none;border-top:none}
-.visual-lines{position:absolute;inset:0;background-image:linear-gradient(var(--line-strong) 2px,transparent 2px),linear-gradient(90deg,var(--line-strong) 2px,transparent 2px);background-size:96px 96px;opacity:.12}
-.hero-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3);margin-top:var(--space-8)}
-.stat{padding:var(--space-4);border:2px solid var(--line-strong);background:var(--surface);box-shadow:var(--shadow-sm);min-height:108px}
-.stat .num{font-family:var(--font-display);font-size:clamp(1.5rem,1.1rem + 2vw,2.4rem);line-height:1;color:var(--coral)}
-.stat .lbl{margin-top:var(--space-2);font-size:var(--text-xs);font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted)}
-.sec-label{display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-8)}
-.num-box{width:48px;height:48px;display:grid;place-items:center;background:var(--ink);color:var(--text-inverse);font-family:var(--font-display);font-size:var(--text-sm);font-weight:800;flex:none}
-.sec-label h2{font-size:var(--text-xl)}
-.about-grid,.cta-grid{display:grid;gap:var(--space-6)}
-.about-copy p + p{margin-top:var(--space-4)}
-.about-panel{background:var(--surface-dark);color:var(--text-inverse);padding:var(--space-6);border:2px solid var(--line-strong);box-shadow:var(--shadow-md);border-radius:var(--radius)}
-.about-panel h3{font-size:var(--text-lg);color:var(--gold);margin-bottom:var(--space-4)}
-.about-panel ul{list-style:none;display:grid;gap:var(--space-3)}
-.about-panel li{display:flex;gap:var(--space-3);align-items:flex-start;padding-top:var(--space-3);border-top:1px solid rgba(244,241,234,.18);font-size:var(--text-sm);font-weight:600;line-height:1.5}
-.about-panel li:first-child{border-top:none;padding-top:0}
-.dot{width:10px;height:10px;background:var(--teal);border:2px solid var(--paper);flex:none;margin-top:.45em}
-.card-grid,.products-grid,.ach-grid{display:grid;gap:var(--space-4)}
-.card,.prod-item,.ach-item{border:2px solid var(--line-strong);background:var(--surface);box-shadow:var(--shadow-sm);border-radius:var(--radius);overflow:hidden}
-.card{padding:var(--space-5);min-height:100%;display:flex;flex-direction:column;gap:var(--space-3)}
-.card:nth-child(2n){background:color-mix(in srgb,var(--paper-2) 58%,var(--surface))}
-.card-top{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3)}
-.icon-block{width:38px;height:38px;border:2px solid var(--line-strong);background:var(--coral);flex:none}
-.card-index{font-size:var(--text-xs);font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted)}
-.card h3{font-size:var(--text-lg)}
-.products{background:var(--cobalt)}
-.products .sec-label h2,.products p,.products .prod-item h4,.products .prod-item .p-num{color:#f7f8ff}
-.products .num-box{background:var(--gold);color:#0b0d17}
-.products .section-intro{color:rgba(247,248,255,.82)}
-.prod-item{background:rgba(255,255,255,.08);padding:var(--space-5);backdrop-filter:blur(8px);min-height:160px;display:flex;flex-direction:column;justify-content:space-between}
-.prod-item .p-num{font-size:var(--text-xs);font-weight:800;letter-spacing:.08em;text-transform:uppercase;opacity:.78}
-.prod-item h4{font-size:var(--text-lg)}
-.section-intro{margin-top:-.5rem;margin-bottom:var(--space-6)}
-.ach-item{padding:var(--space-6) var(--space-4);text-align:center;min-height:180px;display:grid;align-content:center;gap:var(--space-2)}
-.ach-item .big{font-family:var(--font-display);font-size:clamp(2.2rem,1.3rem + 4vw,3.8rem);line-height:.95;color:var(--coral)}
-.ach-item .desc{font-size:var(--text-xs);font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted)}
-/* ── CONTACT SECTION ── */
-.contact-sec{background:var(--surface-dark);color:var(--text-inverse)}
-.contact-sec h2,.contact-sec .sec-label h2{color:var(--text-inverse)}
-.contact-sec .num-box{background:var(--teal);color:#0b0d17}
-.contact-grid{display:grid;gap:var(--space-6);margin-top:var(--space-8)}
-.contact-card{border:2px solid rgba(244,241,234,.18);border-radius:var(--radius);padding:var(--space-6);background:rgba(255,255,255,.05);display:flex;flex-direction:column;gap:var(--space-3)}
-.contact-card-label{font-size:var(--text-xs);font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
-.contact-card-value{font-family:var(--font-display);font-size:var(--text-lg);color:var(--text-inverse);letter-spacing:-.02em;text-transform:uppercase;line-height:1.1;word-break:break-all}
-.contact-card-value a{color:inherit;text-decoration:none}
-.contact-card-value a:hover{text-decoration:underline;text-underline-offset:4px}
-.contact-icon{width:44px;height:44px;border:2px solid rgba(244,241,234,.22);border-radius:var(--radius-sm);display:grid;place-items:center;background:rgba(255,255,255,.08);flex:none}
-.contact-icon svg{width:20px;height:20px;stroke:var(--teal);fill:none;stroke-width:2}
-.contact-cta-row{display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-8)}
-.contact-sec .btn-primary{background:var(--teal);color:#0b0d17;border-color:var(--teal)}
-.contact-sec .btn-secondary{background:transparent;color:var(--text-inverse);border-color:rgba(244,241,234,.5)}
-/* ── FOOTER ── */
-.footer{padding:var(--space-8) 0 max(calc(var(--space-8) + env(safe-area-inset-bottom)),var(--space-8));background:var(--paper);position:relative}
-.footer-inner{display:grid;gap:var(--space-3);font-size:var(--text-xs);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted)}
-@media (min-width: 700px){
-  .container{width:min(calc(100% - 2*var(--space-6)),var(--max))}
-  .hero-actions,.cta-buttons,.contact-cta-row{flex-direction:row;flex-wrap:wrap}
-  .hero-stats{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .products-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .ach-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .footer-inner{grid-template-columns:1fr auto;align-items:center}
-}
-@media (min-width: 980px){
-  :root{--header-h:84px}
-  .container{width:min(calc(100% - 2*var(--space-8)),var(--max))}
-  .menu-toggle{display:none}
-  .desktop-nav{display:flex}
-  .nav-panel{display:none !important}
-  .hero-grid{grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr);gap:var(--space-12)}
-  .hero-visual{min-height:520px}
-  .about-grid{grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);align-items:start}
-  .card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .products-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .ach-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .contact-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-}
-@media (hover:hover){
-  .btn:hover,.theme-toggle:hover,.menu-toggle:hover,.nav-link:hover,.nav-cta:hover,.desktop-nav .desk-cta:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-md)}
-  .card:hover,.prod-item:hover,.ach-item:hover,.contact-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
-}
-@media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto}
-  *{animation:none !important;transition:none !important}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Prymm Enterprises | Industrial, Agricultural, Medical & Electronics Distribution</title>
+  <meta name="description" content="Prymm Enterprises is an importer, distributor, and wholesaler established in 2017 serving private organizations and government institutions.">
+  <meta name="theme-color" content="#0b0d17">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.prymm.enterprises/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prymm Enterprises | Precision Distribution Since 2017">
+  <meta property="og:description" content="Importer and distributor of industrial equipment, agricultural machinery, medical instruments, electronics, and wholesale essentials.">
+  <meta property="og:url" content="https://www.prymm.enterprises/">
+  <meta property="og:site_name" content="Prymm Enterprises">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Prymm Enterprises | Precision Distribution Since 2017">
+  <meta name="twitter:description" content="Importer and distributor supporting private and government procurement requirements.">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+  <style>
+    :root,[data-theme="light"]{
+      --font-display:'Cabinet Grotesk','Arial Black','Helvetica Neue',sans-serif;
+      --font-body:'Satoshi','Inter','Helvetica Neue',sans-serif;
+      --text-xs:clamp(.75rem,.72rem + .18vw,.875rem);
+      --text-sm:clamp(.875rem,.84rem + .2vw,1rem);
+      --text-base:clamp(1rem,.96rem + .2vw,1.125rem);
+      --text-lg:clamp(1.125rem,1rem + .6vw,1.5rem);
+      --text-xl:clamp(1.5rem,1.15rem + 1.3vw,2.25rem);
+      --text-2xl:clamp(2.2rem,1.6rem + 2.8vw,4rem);
+      --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;
+      --ink:#0b0d17;--paper:#f4f1ea;--paper-2:#ece6d9;--paper-3:#e3dccd;--cobalt:#1d3ff2;--gold:#e6a417;--coral:#ff5d3d;--teal:#00b3a4;
+      --line:rgba(11,13,23,.14);--line-strong:#0b0d17;--text:#0b0d17;--text-muted:#343b4f;--text-inverse:#f4f1ea;
+      --surface:#fff;--surface-dark:#111421;--shadow-sm:0 8px 24px rgba(11,13,23,.08);--shadow-md:0 18px 48px rgba(11,13,23,.12);
+      --radius:1rem;--radius-sm:.75rem;--max:1200px;--header-h:78px;
+    }
+    [data-theme="dark"]{--ink:#f4f1ea;--paper:#0d111b;--paper-2:#111624;--paper-3:#171d2b;--line:rgba(244,241,234,.15);--line-strong:#f4f1ea;--text:#f4f1ea;--text-muted:#c5cada;--text-inverse:#0d111b;--surface:#131a28;--surface-dark:#05070d;--shadow-sm:0 10px 26px rgba(0,0,0,.28);--shadow-md:0 20px 56px rgba(0,0,0,.34)}
+    *,:before,:after{box-sizing:border-box;margin:0;padding:0}
+    html{-webkit-text-size-adjust:none;text-size-adjust:none;scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + var(--space-4));}
+    body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.6;background:var(--paper);color:var(--text);overflow-x:hidden}
+    a,button,input,textarea,select{-webkit-tap-highlight-color:transparent}
+    button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
+    a{text-decoration:none;color:inherit}
+    p{max-width:72ch;color:var(--text-muted)}
+    h1,h2,h3,h4{font-family:var(--font-display);line-height:1;text-transform:uppercase;letter-spacing:-.03em}
+    :focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:var(--radius-sm)}
+    .skip-link{position:absolute;left:var(--space-4);top:-120px;background:var(--cobalt);color:#fff;padding:var(--space-3) var(--space-4);z-index:1000;border-radius:var(--radius-sm);font-weight:700}
+    .skip-link:focus{top:var(--space-4)}
+    .grid-overlay{position:fixed;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:40px 40px;opacity:.34;pointer-events:none;z-index:0;mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 85%)}
+    .container{width:min(calc(100% - 2*var(--space-4)),var(--max));margin-inline:auto;position:relative;z-index:1}
+    .section{padding:clamp(var(--space-12),10vw,var(--space-20)) 0;border-bottom:2px solid var(--line-strong)}
+    .header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(16px);border-bottom:2px solid var(--line-strong)}
+    .header-inner{min-height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
+    .brand{display:flex;align-items:center;gap:var(--space-3)}
+    .brand-mark{width:42px;height:42px;border:2px solid var(--line-strong);background:linear-gradient(135deg,var(--cobalt) 0 50%,var(--gold) 50% 100%)}
+    .brand-name{font-family:var(--font-display);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .brand-sub{font-size:var(--text-xs);color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase}
+    .header-actions{display:flex;align-items:center;gap:var(--space-2)}
+    .theme-toggle,.menu-toggle{min-width:44px;min-height:44px;display:grid;place-items:center;border:2px solid var(--line-strong);background:var(--surface);border-radius:var(--radius-sm);box-shadow:var(--shadow-sm)}
+    .desktop-nav{display:none;align-items:center;gap:var(--space-2)}
+    .desktop-nav a{padding:var(--space-3) var(--space-4);font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;min-height:44px;display:inline-flex;align-items:center}
+    .desktop-nav a[aria-current="true"]{background:var(--paper-2)}
+    .desktop-nav .cta{border:2px solid var(--line-strong)}
+    .desktop-nav .cta.primary{background:var(--ink);color:var(--text-inverse)}
+    .nav-panel{position:fixed;top:var(--header-h);left:0;right:0;background:color-mix(in srgb,var(--paper) 97%,transparent);border-bottom:2px solid var(--line-strong);padding:var(--space-4);display:none;z-index:45}
+    .nav-panel.open{display:block}
+    .nav-list{list-style:none;display:grid;gap:var(--space-2)}
+    .nav-link,.nav-cta{min-height:44px;display:flex;align-items:center;justify-content:center;border:2px solid var(--line-strong);background:var(--surface);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .nav-cta.primary{background:var(--ink);color:var(--text-inverse)}
+    .hero{min-height:calc(100dvh - var(--header-h));display:flex;align-items:center}
+    .hero-grid{display:grid;gap:var(--space-8)}
+    .tag{display:inline-flex;align-items:center;padding:var(--space-2) var(--space-4);font-size:var(--text-xs);font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--gold);border:2px solid var(--line-strong);margin-bottom:var(--space-6)}
+    .hero h1{font-size:var(--text-2xl);max-width:14ch}
+    .accent{color:var(--cobalt)}
+    .hero-actions,.contact-cta-row{display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-6)}
+    .btn{min-height:44px;padding:0 var(--space-5);display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--line-strong);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:999px}
+    .btn-primary{background:var(--ink);color:var(--text-inverse)}
+    .btn-secondary{background:var(--surface)}
+    .hero-visual{min-height:320px;border:2px solid var(--line-strong);background:linear-gradient(180deg,var(--paper-2),var(--paper-3));position:relative;overflow:hidden;border-radius:var(--radius);box-shadow:var(--shadow-md)}
+    .geo-card{position:absolute;border:2px solid var(--line-strong)} .geo-a{inset:12% 48% 42% 8%;background:var(--cobalt)} .geo-b{inset:26% 12% 20% 54%;background:var(--gold)} .geo-c{width:120px;height:120px;border-radius:50%;background:var(--teal);bottom:10%;left:12%} .geo-d{width:0;height:0;border-left:72px solid transparent;border-right:72px solid transparent;border-bottom:128px solid var(--coral);top:12%;right:12%;border-top:none}
+    .sec-label{display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-6)}
+    .num-box{width:48px;height:48px;display:grid;place-items:center;background:var(--ink);color:var(--text-inverse);font-family:var(--font-display);font-weight:700}
+    .sec-label h2{font-size:var(--text-xl)}
+    .section-intro{margin-bottom:var(--space-6)}
+    .card-grid,.stack-grid,.faq-grid{display:grid;gap:var(--space-4)}
+    .card,.stack-item,.faq-item,.contact-card,.form-card{border:2px solid var(--line-strong);background:var(--surface);border-radius:var(--radius);padding:var(--space-5);box-shadow:var(--shadow-sm)}
+    .card h3,.stack-item h3{font-size:var(--text-lg);margin-bottom:var(--space-2)}
+    .small{font-size:var(--text-sm)}
+    .products{background:var(--cobalt)} .products .sec-label h2,.products .section-intro,.products h3,.products p,.products .placeholder{color:#f7f8ff} .products .num-box{background:var(--gold);color:#0b0d17} .products .card{background:rgba(255,255,255,.07)}
+    .placeholder{font-size:var(--text-xs);font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.9;margin-top:var(--space-3)}
+    .faq-item button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:var(--space-3);font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-align:left;min-height:44px}
+    .faq-item .faq-panel{padding-top:var(--space-3)}
+    .faq-item [hidden]{display:none !important}
+    .contact-sec{background:var(--surface-dark);color:var(--text-inverse)}
+    .contact-sec p,.contact-sec .sec-label h2,.contact-sec h3,.contact-sec label,.contact-sec legend{color:var(--text-inverse)}
+    .contact-sec .num-box{background:var(--teal);color:#0b0d17}
+    .contact-grid{display:grid;gap:var(--space-4);margin-bottom:var(--space-8)}
+    .contact-card{background:rgba(255,255,255,.04);border-color:rgba(244,241,234,.24)}
+    .contact-card-label{font-size:var(--text-xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+    .contact-card-value a{text-decoration:underline;text-underline-offset:3px;word-break:break-word}
+    .form-grid{display:grid;gap:var(--space-4)}
+    .form-card{background:rgba(255,255,255,.05);border-color:rgba(244,241,234,.26)}
+    .field{display:grid;gap:var(--space-2)}
+    .field input,.field select,.field textarea{min-height:44px;border:2px solid rgba(244,241,234,.4);background:#fff;color:#0b0d17;padding:var(--space-2) var(--space-3);border-radius:var(--radius-sm);font:inherit}
+    .field textarea{min-height:132px;resize:vertical}
+    .field .hint,.feedback{font-size:var(--text-xs)}
+    .error{color:#ffd7ce;font-size:var(--text-xs);font-weight:700}
+    .hidden-honeypot{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .feedback{min-height:1.5em;font-weight:700}
+    .success{color:#9ff9e2}
+    .footer{padding:var(--space-8) 0;background:var(--paper)}
+    .footer-inner{display:grid;gap:var(--space-2);font-size:var(--text-xs);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted)}
+    @media (min-width:700px){
+      .container{width:min(calc(100% - 2*var(--space-6)),var(--max))}
+      .hero-actions,.contact-cta-row{flex-direction:row;flex-wrap:wrap}
+      .card-grid,.stack-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .contact-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .footer-inner{grid-template-columns:1fr auto}
+    }
+    @media (min-width:980px){
+      :root{--header-h:84px}
+      .container{width:min(calc(100% - 2*var(--space-8)),var(--max))}
+      .menu-toggle{display:none}
+      .desktop-nav{display:flex}
+      .nav-panel{display:none !important}
+      .hero-grid{grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr)}
+      .card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    }
+    @media (hover:hover){
+      .btn:hover,.theme-toggle:hover,.menu-toggle:hover,.nav-link:hover,.nav-cta:hover,.desktop-nav a:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-md)}
+      .card:hover,.stack-item:hover,.faq-item:hover,.contact-card:hover,.form-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none !important;transition:none !important}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Prymm Enterprises",
+        "url": "https://www.prymm.enterprises/",
+        "email": "info@prymm.enterprises",
+        "telephone": "+639524669089",
+        "foundingDate": "2017",
+        "sameAs": ["https://www.prymm.enterprises"]
+      },
+      {
+        "@type": "WebSite",
+        "name": "Prymm Enterprises",
+        "url": "https://www.prymm.enterprises/"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<div class="grid-overlay" aria-hidden="true"></div>
-<header class="header">
-  <div class="container header-inner">
-    <a class="brand" href="#top" aria-label="Prymm Enterprises home">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span class="brand-text">
-        <span class="brand-name">Prymm Enterprises</span>
-        <span class="brand-sub">Importer · Distributor · Wholesaler</span>
-      </span>
-    </a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#industries">Industries</a>
-      <a href="#products">Products</a>
-      <a href="#achievements">Results</a>
-      <a class="desk-cta" href="#contact">Contact Us</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Prymm Enterprises home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <span class="brand-name">Prymm Enterprises</span>
+          <span class="brand-sub">Importer · Distributor · Wholesaler</span>
+        </span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#products" data-nav-link>Products</a>
+        <a href="#industries" data-nav-link>Industries</a>
+        <a href="#procurement" data-nav-link>Process</a>
+        <a href="#faq" data-nav-link>FAQ</a>
+        <a href="#contact" class="cta" data-contact-intent="contact">Contact</a>
+        <a href="#quote" class="cta primary" data-contact-intent="quote">Request a Quote</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" data-theme-toggle>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79"></path></svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-panel" id="mobile-menu" aria-label="Mobile navigation" hidden>
+      <ul class="nav-list">
+        <li><a class="nav-link" href="#products" data-nav-link>Products</a></li>
+        <li><a class="nav-link" href="#industries" data-nav-link>Industries</a></li>
+        <li><a class="nav-link" href="#procurement" data-nav-link>Process</a></li>
+        <li><a class="nav-link" href="#resources" data-nav-link>Resources</a></li>
+        <li><a class="nav-link" href="#faq" data-nav-link>FAQ</a></li>
+        <li><a class="nav-cta" href="#contact" data-contact-intent="contact">Contact</a></li>
+        <li><a class="nav-cta primary" href="#quote" data-contact-intent="quote">Request a Quote</a></li>
+      </ul>
     </nav>
-    <div class="header-actions">
-      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" data-theme-toggle>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-      </button>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
-      </button>
-    </div>
-  </div>
-  <nav class="nav-panel" id="mobile-menu" aria-label="Mobile navigation">
-    <ul class="nav-list">
-      <li><a class="nav-link" href="#about">About</a></li>
-      <li><a class="nav-link" href="#industries">Industries</a></li>
-      <li><a class="nav-link" href="#products">Products</a></li>
-      <li><a class="nav-link" href="#achievements">Results</a></li>
-      <li><a class="nav-cta" href="#contact">Contact Us</a></li>
-    </ul>
-  </nav>
-</header>
-<main id="main">
-  <section class="section hero" id="top">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <span class="tag">Established 2017 · Trusted Institutional Supply</span>
-        <h1>Precision distribution for <span class="accent">industry</span> and government.</h1>
-        <p class="lead">Prymm Enterprises imports and distributes heavy equipment, agricultural machinery, medical instruments, electronics, digital goods, and essential wholesale supplies for organizations that need dependable delivery and professional support.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Contact Us</a>
-          <a class="btn btn-secondary" href="#industries">Explore Capabilities</a>
-        </div>
-        <div class="hero-stats" aria-label="Key company highlights">
-          <div class="stat"><div class="num">2017</div><div class="lbl">Founded</div></div>
-          <div class="stat"><div class="num">5+</div><div class="lbl">Core categories</div></div>
-          <div class="stat"><div class="num">2</div><div class="lbl">Sectors served</div></div>
-          <div class="stat"><div class="num">A+</div><div class="lbl">Reliability focus</div></div>
-        </div>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="visual-lines"></div>
-        <div class="geo-card geo-a"></div>
-        <div class="geo-card geo-b"></div>
-        <div class="geo-card geo-c"></div>
-        <div class="geo-card geo-d"></div>
-      </div>
-    </div>
-  </section>
+  </header>
 
-  <section class="section" id="about">
-    <div class="container">
-      <div class="sec-label"><div class="num-box">01</div><h2>Who We Are</h2></div>
-      <div class="about-grid">
-        <div class="about-copy">
-          <p>Since 2017, Prymm Enterprises has grown into a dynamic importer and distributor of specialized industrial and heavy equipment, agricultural machinery, medical instruments, digital goods, and electronic devices.</p>
-          <p>The company also operates as a wholesaler of office supplies, equipment, and professional sound systems, giving clients a dependable single-source partner across multiple operational needs.</p>
-          <p>With a strong reputation for reliability and quality, Prymm Enterprises supports both private organizations and government institutions with solutions that strengthen operations, support communities, and drive sustainable growth.</p>
-        </div>
-        <aside class="about-panel" aria-label="Reasons to choose Prymm Enterprises">
-          <h3>Why partners choose us</h3>
-          <ul>
-            <li><span class="dot" aria-hidden="true"></span><span>Government-ready procurement support and institutional professionalism.</span></li>
-            <li><span class="dot" aria-hidden="true"></span><span>Broad sourcing across industrial, agricultural, medical, and electronic categories.</span></li>
-            <li><span class="dot" aria-hidden="true"></span><span>Reliable import and distribution pipeline built around continuity and accountability.</span></li>
-            <li><span class="dot" aria-hidden="true"></span><span>Consistent service reputation established since 2017.</span></li>
-          </ul>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="industries">
-    <div class="container">
-      <div class="sec-label"><div class="num-box">02</div><h2>Industries We Equip</h2></div>
-      <p class="section-intro">Structured supply support for organizations that require scale, compliance, and dependable execution.</p>
-      <div class="card-grid">
-        <article class="card"><div class="card-top"><div class="icon-block" aria-hidden="true"></div><span class="card-index">01</span></div><h3>Industrial Equipment</h3><p>Machinery and specialized equipment for demanding operational environments where consistency matters.</p></article>
-        <article class="card"><div class="card-top"><div class="icon-block" aria-hidden="true"></div><span class="card-index">02</span></div><h3>Agricultural Machinery</h3><p>Equipment solutions that help improve productivity, continuity, and field readiness for agricultural operations.</p></article>
-        <article class="card"><div class="card-top"><div class="icon-block" aria-hidden="true"></div><span class="card-index">03</span></div><h3>Medical Instruments</h3><p>Reliable instrumentation for healthcare and institutional settings where precision and trust are essential.</p></article>
-        <article class="card"><div class="card-top"><div class="icon-block" aria-hidden="true"></div><span class="card-index">04</span></div><h3>Digital &amp; Electronic Goods</h3><p>Modern devices and digital product lines that support evolving administrative and operational requirements.</p></article>
-        <article class="card"><div class="card-top"><div class="icon-block" aria-hidden="true"></div><span class="card-index">05</span></div><h3>Government Institutions</h3><p>Distribution support aligned with the procurement expectations and accountability standards of the public sector.</p></article>
-        <article class="card"><div class="card-top"><div class="icon-block" aria-hidden="true"></div><span class="card-index">06</span></div><h3>Private Enterprises</h3><p>Scalable commercial supply partnerships for organizations that need flexibility, professionalism, and speed.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section products" id="products">
-    <div class="container">
-      <div class="sec-label"><div class="num-box">03</div><h2>What We Distribute</h2></div>
-      <p class="section-intro">A multi-category distribution portfolio designed to support day-to-day operations as well as major procurement needs.</p>
-      <div class="products-grid">
-        <article class="prod-item"><span class="p-num">01</span><h4>Heavy Equipment</h4></article>
-        <article class="prod-item"><span class="p-num">02</span><h4>Agricultural Machinery</h4></article>
-        <article class="prod-item"><span class="p-num">03</span><h4>Medical Instruments</h4></article>
-        <article class="prod-item"><span class="p-num">04</span><h4>Digital Goods</h4></article>
-        <article class="prod-item"><span class="p-num">05</span><h4>Electronic Devices</h4></article>
-        <article class="prod-item"><span class="p-num">06</span><h4>Office Supplies &amp; Equipment</h4></article>
-        <article class="prod-item"><span class="p-num">07</span><h4>Professional Sound Systems</h4></article>
-        <article class="prod-item"><span class="p-num">08</span><h4>Wholesale Essentials</h4></article>
-        <article class="prod-item"><span class="p-num">09</span><h4>Custom Import Solutions</h4></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="achievements">
-    <div class="container">
-      <div class="sec-label"><div class="num-box">04</div><h2>Built On Trust</h2></div>
-      <div class="ach-grid">
-        <article class="ach-item"><div class="big">7+</div><div class="desc">Years in operation</div></article>
-        <article class="ach-item"><div class="big">1000s</div><div class="desc">Units distributed</div></article>
-        <article class="ach-item"><div class="big">2</div><div class="desc">Core sectors served</div></article>
-        <article class="ach-item"><div class="big">A+</div><div class="desc">Quality and reliability focus</div></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT US SECTION -->
-  <section class="section contact-sec" id="contact">
-    <div class="container">
-      <div class="sec-label"><div class="num-box">05</div><h2>Contact Us</h2></div>
-      <p class="section-intro" style="color:rgba(244,241,234,.78);margin-bottom:0">Get in touch with Prymm Enterprises for inquiries, procurement partnerships, and distribution arrangements.</p>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          </div>
-          <div class="contact-card-label">Website</div>
-          <div class="contact-card-value">
-            <a href="https://www.prymm.enterprises" target="_blank" rel="noopener noreferrer">www.prymm.enterprises</a>
+  <main id="main">
+    <section class="section hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <span class="tag">Established 2017 · Institutional Supply Support</span>
+          <h1>Precision distribution for <span class="accent">industry</span> and institutions.</h1>
+          <p class="section-intro">Prymm Enterprises imports and distributes heavy equipment, agricultural machinery, medical instruments, electronics, and wholesale essentials for private organizations and government institutions.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#quote" data-contact-intent="quote">Request a Quote</a>
+            <a class="btn btn-secondary" href="#products">Browse Categories</a>
           </div>
         </div>
-        <div class="contact-card">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div class="contact-card-label">Email</div>
-          <div class="contact-card-value">
-            <a href="mailto:info@prymm.enterprises">info@prymm.enterprises</a>
-          </div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 5.5 5.5l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 15.42l.01 1.5z"/></svg>
-          </div>
-          <div class="contact-card-label">Contact Number</div>
-          <div class="contact-card-value">
-            <a href="tel:+639524669089">0952-466-9089</a>
-          </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="geo-card geo-a"></div><div class="geo-card geo-b"></div><div class="geo-card geo-c"></div><div class="geo-card geo-d"></div>
         </div>
       </div>
-      <div class="contact-cta-row">
-        <a class="btn btn-primary" href="mailto:info@prymm.enterprises">Send Us an Email</a>
-        <a class="btn btn-secondary" href="tel:+639524669089">Call Now</a>
+    </section>
+
+    <section class="section products" id="products">
+      <div class="container">
+        <div class="sec-label"><div class="num-box">01</div><h2>Products &amp; Catalog</h2></div>
+        <p class="section-intro">Core categories currently supplied by Prymm Enterprises.</p>
+        <div class="card-grid">
+          <article class="card" data-interest="heavy-equipment"><h3>Heavy Equipment</h3><p>Distribution support for operational and industrial demand.</p></article>
+          <article class="card" data-interest="agri-machinery"><h3>Agricultural Machinery</h3><p>Equipment categories supporting continuity and field-ready operations.</p></article>
+          <article class="card" data-interest="medical-instruments"><h3>Medical Instruments</h3><p>Reliable instruments aligned with institutional quality requirements.</p></article>
+          <article class="card" data-interest="digital-goods"><h3>Digital Goods &amp; Electronics</h3><p>Modern device and digital product categories for evolving needs.</p></article>
+          <article class="card" data-interest="office-supplies"><h3>Office &amp; Wholesale Essentials</h3><p>Office supplies, equipment, and broad wholesale essentials.</p></article>
+          <article class="card" data-interest="sound-systems"><h3>Professional Sound Systems</h3><p>Specialized audio equipment categories for professional applications.</p></article>
+        </div>
+        <p class="placeholder">Editable content placeholder: add SKU-level catalog tables or downloadable product sheets when available.</p>
       </div>
+    </section>
+
+    <section class="section" id="industries">
+      <div class="container">
+        <div class="sec-label"><div class="num-box">02</div><h2>Industries &amp; Solutions</h2></div>
+        <p class="section-intro">Solutions designed for both private sector and government procurement environments.</p>
+        <div class="stack-grid">
+          <article class="stack-item"><h3>Government Institutions</h3><p>Professional procurement support with accountable communication and documentation readiness.</p></article>
+          <article class="stack-item"><h3>Private Organizations</h3><p>Flexible category sourcing and scalable distribution support for operational continuity.</p></article>
+          <article class="stack-item"><h3>Industrial Operations</h3><p>Heavy and specialized equipment categories for reliability-focused teams.</p></article>
+          <article class="stack-item"><h3>Healthcare &amp; Technical Units</h3><p>Medical and technical supply categories where consistency and trust are essential.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="procurement">
+      <div class="container">
+        <div class="sec-label"><div class="num-box">03</div><h2>Procurement Process</h2></div>
+        <div class="stack-grid">
+          <article class="stack-item"><h3>Step 1 · Share Requirements</h3><p>Submit quantity, category, and scope via the quote form or contact channels below.</p></article>
+          <article class="stack-item"><h3>Step 2 · Clarify Scope</h3><p>Our team follows up on specifications, delivery constraints, and response preferences.</p></article>
+          <article class="stack-item"><h3>Step 3 · Proposal &amp; Alignment</h3><p>Receive category recommendations and quotation details for review.</p></article>
+          <article class="stack-item"><h3>Step 4 · Confirm &amp; Coordinate</h3><p>Finalize procurement details and coordinate next actions through your selected contact method.</p></article>
+        </div>
+        <p class="placeholder">Editable content placeholder: insert official procurement documents/process timelines after internal approval.</p>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="sec-label"><div class="num-box">04</div><h2>Projects &amp; Case Studies</h2></div>
+        <div class="stack-grid">
+          <article class="stack-item"><h3>Institutional Supply Program</h3><p class="small">Placeholder summary for a verified future case study.</p><p class="placeholder">Editable content placeholder: add project name, timeline, and measurable outcomes after verification.</p></article>
+          <article class="stack-item"><h3>Multi-Category Distribution Engagement</h3><p class="small">Placeholder summary for a verified future case study.</p><p class="placeholder">Editable content placeholder: add client-approved details only.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="resources">
+      <div class="container">
+        <div class="sec-label"><div class="num-box">05</div><h2>Resources &amp; Company Profile</h2></div>
+        <p class="section-intro">Use these resources for procurement planning and organization overview.</p>
+        <div class="stack-grid">
+          <article class="stack-item"><h3>Company Profile</h3><p>Overview of business scope: importer, distributor, and wholesaler established in 2017.</p><button class="btn btn-secondary" type="button" data-profile-download>Company Profile PDF (Placeholder)</button></article>
+          <article class="stack-item"><h3>FAQ &amp; Inquiry Support</h3><p>Use the FAQ below and request form to share complete requirements quickly.</p></article>
+        </div>
+        <p class="placeholder">Editable content placeholder: replace placeholder profile link with a verified file path once published.</p>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="sec-label"><div class="num-box">06</div><h2>FAQ</h2></div>
+        <div class="faq-grid">
+          <article class="faq-item"><h3><button type="button" aria-expanded="false" aria-controls="faq-a" data-faq-trigger>What details should I include in a quote request?<span aria-hidden="true">+</span></button></h3><div id="faq-a" class="faq-panel" hidden><p>Include product category, quantity or scope, organization type, and preferred response method for faster follow-up.</p></div></article>
+          <article class="faq-item"><h3><button type="button" aria-expanded="false" aria-controls="faq-b" data-faq-trigger>Can Prymm Enterprises support government procurement?<span aria-hidden="true">+</span></button></h3><div id="faq-b" class="faq-panel" hidden><p>Yes. Prymm Enterprises serves both private organizations and government institutions.</p></div></article>
+          <article class="faq-item"><h3><button type="button" aria-expanded="false" aria-controls="faq-c" data-faq-trigger>How will I receive a response?<span aria-hidden="true">+</span></button></h3><div id="faq-c" class="faq-panel" hidden><p>You can choose email or phone in the inquiry form. Response timing depends on scope and clarification needs.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-sec" id="contact">
+      <div class="container">
+        <div class="sec-label"><div class="num-box">07</div><h2>Contact &amp; Request a Quote</h2></div>
+        <p class="section-intro">For inquiries and procurement discussions, use your preferred channel or complete the quote form below.</p>
+        <div class="contact-grid">
+          <article class="contact-card"><p class="contact-card-label">Website</p><p class="contact-card-value"><a href="https://www.prymm.enterprises" target="_blank" rel="noopener noreferrer" data-contact-click="website">www.prymm.enterprises</a></p></article>
+          <article class="contact-card"><p class="contact-card-label">Email</p><p class="contact-card-value"><a href="mailto:info@prymm.enterprises" data-contact-click="email">info@prymm.enterprises</a></p></article>
+          <article class="contact-card"><p class="contact-card-label">Phone</p><p class="contact-card-value"><a href="tel:+639524669089" data-contact-click="phone">0952-466-9089</a></p></article>
+        </div>
+        <div class="contact-cta-row">
+          <a class="btn btn-primary" href="mailto:info@prymm.enterprises?subject=Request%20for%20Quote%20-%20Prymm%20Enterprises" data-contact-intent="quote-email">Email a Quote Request</a>
+          <a class="btn btn-secondary" href="tel:+639524669089" data-contact-intent="quote-call">Call for Urgent Inquiries</a>
+        </div>
+
+        <div class="form-card" id="quote">
+          <h3>Request a Quote / Inquiry Form</h3>
+          <p class="small">Expected response: your request is reviewed manually, and a team member follows up through your chosen contact method.</p>
+          <form id="quote-form" novalidate>
+            <div class="hidden-honeypot" aria-hidden="true">
+              <label for="company-website">Leave this field blank</label>
+              <input id="company-website" name="companyWebsite" type="text" autocomplete="off" tabindex="-1">
+            </div>
+            <div class="form-grid">
+              <div class="field"><label for="name">Full name *</label><input id="name" name="name" required autocomplete="name"><p class="error" id="name-error"></p></div>
+              <div class="field"><label for="organization">Organization *</label><input id="organization" name="organization" required autocomplete="organization"><p class="error" id="organization-error"></p></div>
+              <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email"><p class="error" id="email-error"></p></div>
+              <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel"><p class="error" id="phone-error"></p></div>
+              <div class="field"><label for="customer-type">Customer type *</label><select id="customer-type" name="customerType" required><option value="">Select one</option><option>Government institution</option><option>Private organization</option><option>Other</option></select><p class="error" id="customer-type-error"></p></div>
+              <div class="field"><label for="product-category">Product category *</label><select id="product-category" name="productCategory" required><option value="">Select one</option><option>Heavy Equipment</option><option>Agricultural Machinery</option><option>Medical Instruments</option><option>Digital Goods &amp; Electronics</option><option>Office &amp; Wholesale Essentials</option><option>Professional Sound Systems</option><option>Other</option></select><p class="error" id="product-category-error"></p></div>
+              <div class="field"><label for="quantity-scope">Quantity / Scope *</label><input id="quantity-scope" name="quantityScope" required><p class="error" id="quantity-scope-error"></p></div>
+              <fieldset class="field"><legend>Preferred response method *</legend><div><label><input type="radio" name="responseMethod" value="Email" required> Email</label></div><div><label><input type="radio" name="responseMethod" value="Phone" required> Phone</label></div><p class="error" id="responseMethod-error"></p></fieldset>
+            </div>
+            <div class="field" style="margin-top:var(--space-4)"><label for="message">Message *</label><textarea id="message" name="message" required></textarea><p class="hint">Please include key specifications, required timeline context, or special procurement notes.</p><p class="error" id="message-error"></p></div>
+            <div class="contact-cta-row">
+              <button class="btn btn-primary" type="submit">Submit Inquiry</button>
+              <a class="btn btn-secondary" id="mailto-fallback" href="mailto:info@prymm.enterprises?subject=Request%20for%20Quote%20-%20Prymm%20Enterprises">Use Email Fallback</a>
+            </div>
+            <p class="feedback" id="form-feedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2026 Prymm Enterprises · Established 2017</div>
+      <div>Industrial · Agricultural · Medical · Electronics · Wholesale</div>
     </div>
-  </section>
-</main>
-<footer class="footer">
-  <div class="container footer-inner">
-    <div>© 2026 Prymm Enterprises · Established 2017</div>
-    <div>Industrial · Agricultural · Medical · Electronics · Wholesale</div>
-  </div>
-</footer>
-<script>
-(function(){
-  const root=document.documentElement;
-  const themeBtn=document.querySelector('[data-theme-toggle]');
-  const menuBtn=document.querySelector('.menu-toggle');
-  const menu=document.getElementById('mobile-menu');
-  let theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
-  const moon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
-  const sun='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>';
-  function applyTheme(){
-    root.setAttribute('data-theme',theme);
-    if(themeBtn){
-      themeBtn.innerHTML=theme==='dark'?sun:moon;
-      themeBtn.setAttribute('aria-label','Switch to '+(theme==='dark'?'light':'dark')+' mode');
-    }
-  }
-  applyTheme();
-  themeBtn&&themeBtn.addEventListener('click',()=>{theme=theme==='dark'?'light':'dark';applyTheme();});
-  function closeMenu(){
-    menu.classList.remove('open');
-    menuBtn.setAttribute('aria-expanded','false');
-    menuBtn.setAttribute('aria-label','Open menu');
-  }
-  menuBtn&&menuBtn.addEventListener('click',()=>{
-    const open=menu.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded',String(open));
-    menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');
-  });
-  document.querySelectorAll('.nav-panel a').forEach(link=>link.addEventListener('click',closeMenu));
-  window.addEventListener('resize',()=>{if(window.innerWidth>=980) closeMenu();});
-})();
-</script>
+  </footer>
+
+  <script>
+    (function(){
+      const root = document.documentElement;
+      const themeBtn = document.querySelector('[data-theme-toggle]');
+      const menuBtn = document.querySelector('.menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+      const navLinks = document.querySelectorAll('[data-nav-link]');
+      const focusableMenuSelector = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled])';
+      const moon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79"></path></svg>';
+      const sun = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>';
+      let theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      let menuPreviousFocus = null;
+
+      window.dataLayer = window.dataLayer || [];
+      const pushEvent = (name, payload) => window.dataLayer.push({ event: name, ...payload });
+
+      function applyTheme(){
+        root.setAttribute('data-theme', theme);
+        if (themeBtn) {
+          themeBtn.innerHTML = theme === 'dark' ? sun : moon;
+          themeBtn.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode');
+        }
+      }
+      applyTheme();
+      if (themeBtn) themeBtn.addEventListener('click', () => { theme = theme === 'dark' ? 'light' : 'dark'; applyTheme(); });
+
+      function getMenuFocusable(){ return menu ? menu.querySelectorAll(focusableMenuSelector) : []; }
+      function openMenu(){
+        if (!menu || !menuBtn) return;
+        menuPreviousFocus = document.activeElement;
+        menu.classList.add('open');
+        menu.hidden = false;
+        menuBtn.setAttribute('aria-expanded', 'true');
+        menuBtn.setAttribute('aria-label', 'Close menu');
+        const focusable = getMenuFocusable();
+        if (focusable.length) focusable[0].focus();
+        pushEvent('menu_open', { component: 'mobile_nav' });
+      }
+      function closeMenu(restoreFocus){
+        if (!menu || !menuBtn) return;
+        menu.classList.remove('open');
+        menu.hidden = true;
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Open menu');
+        if (restoreFocus && menuPreviousFocus && typeof menuPreviousFocus.focus === 'function') menuPreviousFocus.focus();
+      }
+      if (menuBtn) {
+        menuBtn.addEventListener('click', () => menu.classList.contains('open') ? closeMenu(true) : openMenu());
+      }
+      if (menu) {
+        menu.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') { closeMenu(true); }
+          if (event.key === 'Tab') {
+            const focusable = Array.from(getMenuFocusable());
+            if (!focusable.length) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+            if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+          }
+        });
+      }
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && menu && menu.classList.contains('open')) closeMenu(true);
+      });
+      document.querySelectorAll('.nav-panel a').forEach(link => link.addEventListener('click', () => closeMenu(false)));
+      window.addEventListener('resize', () => { if (window.innerWidth >= 980) closeMenu(false); });
+
+      const sectionIds = ['products','industries','procurement','resources','faq','contact'];
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const id = entry.target.id;
+          if (!sectionIds.includes(id)) return;
+          navLinks.forEach(link => {
+            link.setAttribute('aria-current', link.getAttribute('href') === '#' + id ? 'true' : 'false');
+          });
+        });
+      }, { threshold: 0.35 });
+      sectionIds.forEach(id => { const section = document.getElementById(id); if (section) observer.observe(section); });
+
+      document.querySelectorAll('[data-contact-intent], [data-contact-click]').forEach(el => {
+        el.addEventListener('click', () => {
+          const intent = el.getAttribute('data-contact-intent') || el.getAttribute('data-contact-click');
+          pushEvent('contact_click', { intent: intent });
+        });
+      });
+      document.querySelectorAll('[data-interest]').forEach(card => {
+        card.addEventListener('click', () => pushEvent('product_interest', { category: card.getAttribute('data-interest') }));
+      });
+      const profileLink = document.querySelector('[data-profile-download]');
+      if (profileLink) profileLink.addEventListener('click', () => pushEvent('profile_download_click', { resource: 'company_profile_placeholder' }));
+      document.querySelectorAll('[data-faq-trigger]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const panel = document.getElementById(btn.getAttribute('aria-controls'));
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          if (panel) panel.hidden = expanded;
+          pushEvent('faq_toggle', { question_id: btn.getAttribute('aria-controls'), expanded: !expanded });
+        });
+      });
+
+      const form = document.getElementById('quote-form');
+      const feedback = document.getElementById('form-feedback');
+      const fallback = document.getElementById('mailto-fallback');
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phonePattern = /^[0-9+()\-\s]{7,}$/;
+      let formStarted = false;
+
+      function setError(fieldId, message){
+        const error = document.getElementById(fieldId + '-error');
+        const field = document.getElementById(fieldId) || document.querySelector('[name="' + fieldId + '"]');
+        if (error) error.textContent = message || '';
+        if (field && typeof field.setAttribute === 'function') field.setAttribute('aria-invalid', message ? 'true' : 'false');
+      }
+
+      function validateForm(){
+        let valid = true;
+        const values = {
+          name: form.name.value.trim(), organization: form.organization.value.trim(), email: form.email.value.trim(),
+          phone: form.phone.value.trim(), customerType: form.customerType.value, productCategory: form.productCategory.value,
+          quantityScope: form.quantityScope.value.trim(), message: form.message.value.trim(), responseMethod: form.responseMethod.value
+        };
+        setError('name', values.name ? '' : 'Full name is required.');
+        setError('organization', values.organization ? '' : 'Organization is required.');
+        setError('email', !values.email ? 'Email is required.' : (!emailPattern.test(values.email) ? 'Enter a valid email address.' : ''));
+        setError('phone', values.phone && !phonePattern.test(values.phone) ? 'Enter a valid phone format.' : '');
+        setError('customer-type', values.customerType ? '' : 'Select a customer type.');
+        setError('product-category', values.productCategory ? '' : 'Select a product category.');
+        setError('quantity-scope', values.quantityScope ? '' : 'Quantity or scope is required.');
+        setError('message', values.message ? '' : 'Message is required.');
+        const responseError = document.getElementById('responseMethod-error');
+        if (!values.responseMethod) {
+          valid = false;
+          responseError.textContent = 'Select a preferred response method.';
+        } else {
+          responseError.textContent = '';
+        }
+        form.querySelectorAll('.error').forEach(node => { if (node.textContent.trim() !== '') valid = false; });
+        return { valid: valid, values: values };
+      }
+
+      if (form) {
+        form.addEventListener('input', () => {
+          if (!formStarted) { formStarted = true; pushEvent('form_start', { form_id: 'quote-form' }); }
+        });
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const honeypot = document.getElementById('company-website');
+          if (honeypot && honeypot.value) {
+            feedback.textContent = 'Submission blocked.';
+            feedback.classList.remove('success');
+            return;
+          }
+          const result = validateForm();
+          const subject = encodeURIComponent('Request for Quote - Prymm Enterprises');
+          const body = encodeURIComponent(
+            'Name: ' + result.values.name + '\n' +
+            'Organization: ' + result.values.organization + '\n' +
+            'Email: ' + result.values.email + '\n' +
+            'Phone: ' + result.values.phone + '\n' +
+            'Customer Type: ' + result.values.customerType + '\n' +
+            'Product Category: ' + result.values.productCategory + '\n' +
+            'Quantity/Scope: ' + result.values.quantityScope + '\n' +
+            'Preferred Response: ' + result.values.responseMethod + '\n\n' +
+            'Message:\n' + result.values.message
+          );
+          fallback.href = 'mailto:info@prymm.enterprises?subject=' + subject + '&body=' + body;
+          if (!result.valid) {
+            feedback.textContent = 'Please review highlighted fields and try again.';
+            feedback.classList.remove('success');
+            const firstInvalid = form.querySelector('[aria-invalid="true"]');
+            if (firstInvalid) firstInvalid.focus();
+            return;
+          }
+          feedback.textContent = 'Thanks. Your inquiry is ready. Use "Use Email Fallback" if your mail app does not open automatically.';
+          feedback.classList.add('success');
+          pushEvent('form_submit', { form_id: 'quote-form', customer_type: result.values.customerType, product_category: result.values.productCategory });
+          window.location.href = fallback.href;
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
