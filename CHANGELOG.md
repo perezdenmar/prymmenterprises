@@ -1,6 +1,11 @@
 # Changelog
 
 ## 2026-08-08
+- Replaced the landing page presentation in `index.html` with a fresh Professional/Corporate/Vibrant single-page redesign while preserving verified business facts, canonical domain metadata, structured data, analytics hooks, and quote/contact behavior.
+- Selected visual direction using genuine randomization (`python secrets.randbelow`) from the provided style shortlist; selected style: **Geometric Minimal Grid** (recorded in `README.md`).
+- Rebuilt visual hierarchy with a neutral corporate base and strategic vibrant accents to communicate authority, trust, modern capability, and procurement reliability across one cohesive scroll flow.
+- Preserved and revalidated accessibility and UX expectations: semantic sections, keyboard navigation, visible focus, mobile menu semantics, FAQ semantics, form labels/errors/status messaging, reduced-motion support, and >=44px interactive targets.
+- Updated `README.md` with style-selection rationale, design system, responsive rules, interaction behavior, and QA checklist updates.
 - Redesigned the site as a cohesive Modernist single-scrolling landing page while preserving verified business facts, contact details, domain, SEO metadata, structured data, sitemap, robots, and static GitHub Pages compatibility.
 - Refined visual system in `index.html` with a neutral architectural base, disciplined spacing/grid structure, and controlled accent hierarchy for wayfinding and calls to action.
 - Reframed section narrative into a clear statement → explanation → value → process/proof → action flow across products, industries, procurement, FAQ, and contact.
