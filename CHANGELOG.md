@@ -1,6 +1,12 @@
 # Changelog
 
 ## 2026-08-08
+- Redesigned the site as a cohesive Modernist single-scrolling landing page while preserving verified business facts, contact details, domain, SEO metadata, structured data, sitemap, robots, and static GitHub Pages compatibility.
+- Refined visual system in `index.html` with a neutral architectural base, disciplined spacing/grid structure, and controlled accent hierarchy for wayfinding and calls to action.
+- Reframed section narrative into a clear statement → explanation → value → process/proof → action flow across products, industries, procurement, FAQ, and contact.
+- Updated responsive breakpoints to 375px-first with explicit tablet (`768px`) and desktop (`1280px`) behavior, while preserving reduced-motion handling and keyboard accessibility.
+- Updated `404.html` styling to align with the Modernist system while preserving homepage/contact recovery links.
+- Updated `README.md` with design system tokens, editable content boundaries, breakpoints, interaction rules, and QA checklist.
 - Refined visual hierarchy and narrative flow in `index.html` to better emphasize arrival impact, capability orientation, trust signals, and quote CTA continuity.
 - Tightened palette usage toward charcoal/graphite/steel/warm off-white with controlled cobalt/amber emphasis.
 - Updated section messaging to reinforce professional, corporate, and high-energy tone without adding unverified business claims.
