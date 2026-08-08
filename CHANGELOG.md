@@ -1,6 +1,11 @@
 # Changelog
 
 ## 2026-08-08
+- Refined `index.html` from the merged vibrant presentation toward a more corporate-minimalist visual system without rebuilding the page or altering verified business facts.
+- Reduced decorative noise (heavy gradients, ornamental accent bars, high-intensity panel effects) and tightened hierarchy through cleaner spacing, restrained surfaces, and more consistent alignment.
+- Preserved all required business/technical assets and behaviors: contact details, `CNAME`, SEO metadata, structured data, one-page flow, analytics hooks, FAQ semantics, request-a-quote form validation/status, and reduced-motion accessibility support.
+- Updated `404.html` styling to match the corporate-minimalist direction while preserving homepage/contact recovery links.
+- Updated `README.md` with the corporate-minimalist design summary and QA notes, including CI workflow run inspection notes.
 - Refined the merged Geometric Minimal Grid landing page in `index.html` toward a more premium and vibrant direction without changing verified business facts, contact data, SEO metadata, structured data, domain, or static Pages compatibility.
 - Elevated visual system quality with tighter spacing rhythm, stronger typography emphasis, richer cobalt/amber/teal punctuation by section, improved surface hierarchy, and more polished CTA depth/contrast.
 - Tuned micro-interactions for premium hover/active feel while preserving keyboard focus visibility, reduced-motion handling, and touch-target accessibility requirements.
