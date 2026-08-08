@@ -21,90 +21,94 @@
   <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
   <style>
     :root,[data-theme="light"]{
-      --font-display:'Cabinet Grotesk','Arial Black','Helvetica Neue',sans-serif;
-      --font-body:'Satoshi','Inter','Helvetica Neue',sans-serif;
-      --text-xs:clamp(.75rem,.72rem + .18vw,.875rem);
+      --font-display:'Cabinet Grotesk','Helvetica Neue',Arial,sans-serif;
+      --font-body:'Satoshi','Inter','Helvetica Neue',Arial,sans-serif;
+      --text-xs:clamp(.75rem,.72rem + .15vw,.875rem);
       --text-sm:clamp(.875rem,.84rem + .2vw,1rem);
       --text-base:clamp(1rem,.96rem + .2vw,1.125rem);
-      --text-lg:clamp(1.125rem,1rem + .6vw,1.5rem);
-      --text-xl:clamp(1.5rem,1.15rem + 1.3vw,2.25rem);
-      --text-2xl:clamp(2.2rem,1.6rem + 2.8vw,4rem);
+      --text-lg:clamp(1.125rem,1.02rem + .5vw,1.375rem);
+      --text-xl:clamp(1.6rem,1.22rem + 1.2vw,2.25rem);
+      --text-2xl:clamp(2.1rem,1.55rem + 2.2vw,3.75rem);
       --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;
-      --ink:#0b0d17;--paper:#f4f1ea;--paper-2:#ece6d9;--paper-3:#ddd6c8;--graphite:#1d2433;--steel:#627085;--cobalt:#1d3ff2;--gold:#e6a417;
-      --line:rgba(11,13,23,.14);--line-strong:#0b0d17;--text:#0b0d17;--text-muted:#343b4f;--text-inverse:#f4f1ea;
-      --surface:#fff;--surface-dark:#111421;--shadow-sm:0 8px 24px rgba(11,13,23,.08);--shadow-md:0 18px 48px rgba(11,13,23,.12);
+      --ink:#18202d;--paper:#f5f4f0;--paper-2:#eeece5;--paper-3:#e5e2d8;--graphite:#2a3241;--steel:#647286;--accent:#3158f5;--accent-2:#d67b11;
+      --line:rgba(24,32,45,.12);--line-strong:rgba(24,32,45,.22);--text:#18202d;--text-muted:#3d485b;--text-inverse:#f5f4f0;
+      --surface:#ffffff;--surface-alt:#f8f7f2;--surface-dark:#121824;--shadow-sm:0 10px 28px rgba(24,32,45,.08);--shadow-md:0 24px 64px rgba(24,32,45,.12);
       --radius:1rem;--radius-sm:.75rem;--max:1200px;--header-h:78px;
     }
-    [data-theme="dark"]{--ink:#f4f1ea;--paper:#0d111b;--paper-2:#111624;--paper-3:#171d2b;--line:rgba(244,241,234,.15);--line-strong:#f4f1ea;--text:#f4f1ea;--text-muted:#c5cada;--text-inverse:#0d111b;--surface:#131a28;--surface-dark:#05070d;--shadow-sm:0 10px 26px rgba(0,0,0,.28);--shadow-md:0 20px 56px rgba(0,0,0,.34)}
+    [data-theme="dark"]{--ink:#eef2fb;--paper:#0d1118;--paper-2:#111726;--paper-3:#182032;--line:rgba(238,242,251,.14);--line-strong:rgba(238,242,251,.26);--text:#eef2fb;--text-muted:#c7cfdf;--text-inverse:#0d1118;--surface:#121a2a;--surface-alt:#0f1726;--surface-dark:#060913;--shadow-sm:0 12px 34px rgba(0,0,0,.3);--shadow-md:0 24px 72px rgba(0,0,0,.4)}
     *,:before,:after{box-sizing:border-box;margin:0;padding:0}
     html{-webkit-text-size-adjust:none;text-size-adjust:none;scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + var(--space-4));}
-    body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.6;background:var(--paper);color:var(--text);overflow-x:hidden}
+    body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;background:linear-gradient(180deg,var(--paper),var(--surface-alt));color:var(--text);overflow-x:hidden}
     a,button,input,textarea,select{-webkit-tap-highlight-color:transparent}
     button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
     a{text-decoration:none;color:inherit}
     p{max-width:72ch;color:var(--text-muted);overflow-wrap:anywhere}
-    h1,h2,h3,h4{font-family:var(--font-display);line-height:1.05;text-transform:uppercase;letter-spacing:-.02em;font-weight:700;text-wrap:balance}
-    :focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:var(--radius-sm)}
-    .skip-link{position:absolute;left:var(--space-4);top:-120px;background:var(--cobalt);color:#fff;padding:var(--space-3) var(--space-4);z-index:1000;border-radius:var(--radius-sm);font-weight:700}
+    h1,h2,h3,h4{font-family:var(--font-display);line-height:1.08;letter-spacing:-.02em;font-weight:700;text-wrap:balance}
+    :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:var(--radius-sm)}
+    .skip-link{position:absolute;left:var(--space-4);top:-120px;background:var(--accent);color:#fff;padding:var(--space-3) var(--space-4);z-index:1000;border-radius:var(--radius-sm);font-weight:700}
     .skip-link:focus{top:var(--space-4)}
-    .grid-overlay{position:fixed;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:40px 40px;opacity:.34;pointer-events:none;z-index:0;mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 85%)}
+    .grid-overlay{position:fixed;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.22;pointer-events:none;z-index:0;mask-image:linear-gradient(to bottom,rgba(0,0,0,.7),transparent 86%)}
     .container{width:min(calc(100% - 2*var(--space-4)),var(--max));margin-inline:auto;position:relative;z-index:1}
-    .section{padding:clamp(var(--space-12),10vw,var(--space-20)) 0;border-bottom:2px solid var(--line-strong)}
-    .header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(16px);border-bottom:2px solid var(--line-strong)}
+    .section{padding:clamp(var(--space-12),9vw,var(--space-20)) 0;border-bottom:1px solid var(--line)}
+    .header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 84%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-strong)}
     .header-inner{min-height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
     .brand{display:flex;align-items:center;gap:var(--space-3)}
-    .brand-mark{width:42px;height:42px;border:2px solid var(--line-strong);background:linear-gradient(135deg,var(--cobalt) 0 50%,var(--gold) 50% 100%)}
-    .brand-name{font-family:var(--font-display);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-    .brand-sub{font-size:var(--text-xs);color:var(--text-muted);letter-spacing:.08em;text-transform:uppercase}
+    .brand-mark{width:42px;height:42px;border:1px solid var(--line-strong);background:linear-gradient(135deg,var(--accent) 0 40%,var(--paper-2) 40% 100%);border-radius:.35rem}
+    .brand-name{font-family:var(--font-display);font-size:var(--text-sm);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+    .brand-sub{font-size:var(--text-xs);color:var(--text-muted);letter-spacing:.06em;text-transform:uppercase}
     .header-actions{display:flex;align-items:center;gap:var(--space-2)}
-    .theme-toggle,.menu-toggle{min-width:44px;min-height:44px;display:grid;place-items:center;border:2px solid var(--line-strong);background:var(--surface);border-radius:var(--radius-sm);box-shadow:var(--shadow-sm)}
+    .theme-toggle,.menu-toggle{min-width:44px;min-height:44px;display:grid;place-items:center;border:1px solid var(--line-strong);background:var(--surface);border-radius:var(--radius-sm);box-shadow:var(--shadow-sm)}
     .desktop-nav{display:none;align-items:center;gap:var(--space-2)}
-    .desktop-nav a{padding:var(--space-3) var(--space-4);font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;min-height:44px;display:inline-flex;align-items:center}
+    .desktop-nav a{padding:var(--space-3) var(--space-4);font-size:var(--text-xs);font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:999px;min-height:44px;display:inline-flex;align-items:center}
     .desktop-nav a[aria-current="true"]{background:var(--paper-2)}
-    .desktop-nav .cta{border:2px solid var(--line-strong)}
-    .desktop-nav .cta.primary{background:var(--ink);color:var(--text-inverse)}
-    .nav-panel{position:fixed;top:var(--header-h);left:0;right:0;background:color-mix(in srgb,var(--paper) 97%,transparent);border-bottom:2px solid var(--line-strong);padding:var(--space-4);display:none;z-index:45}
+    .desktop-nav .cta{border:1px solid var(--line-strong)}
+    .desktop-nav .cta.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .nav-panel{position:fixed;top:var(--header-h);left:0;right:0;background:color-mix(in srgb,var(--paper) 96%,transparent);border-bottom:1px solid var(--line-strong);padding:var(--space-4);display:none;z-index:45}
     .nav-panel.open{display:block}
     .nav-list{list-style:none;display:grid;gap:var(--space-2)}
-    .nav-link,.nav-cta{min-height:44px;display:flex;align-items:center;justify-content:center;border:2px solid var(--line-strong);background:var(--surface);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-    .nav-cta.primary{background:var(--ink);color:var(--text-inverse)}
+    .nav-link,.nav-cta{min-height:44px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line-strong);background:var(--surface);font-size:var(--text-sm);font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:999px}
+    .nav-cta.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
     .hero{min-height:calc(100dvh - var(--header-h));display:flex;align-items:center}
     .hero-grid{display:grid;gap:var(--space-8)}
-    .tag{display:inline-flex;align-items:center;padding:var(--space-2) var(--space-4);font-size:var(--text-xs);font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--paper-2);border:2px solid var(--line-strong);box-shadow:inset .35rem 0 0 var(--gold);margin-bottom:var(--space-6)}
+    .tag{display:inline-flex;align-items:center;padding:var(--space-2) var(--space-4);font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--paper-2);border:1px solid var(--line-strong);margin-bottom:var(--space-6);border-radius:999px}
     .hero h1{font-size:var(--text-2xl);max-width:14ch}
-    .accent{color:var(--cobalt)}
+    .accent{color:var(--accent)}
     .hero-actions,.contact-cta-row{display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-6)}
-    .btn{min-height:44px;padding:0 var(--space-5);display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--line-strong);font-size:var(--text-sm);font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:999px}
-    .btn-primary{background:var(--ink);color:var(--text-inverse)}
+    .btn{min-height:44px;padding:0 var(--space-5);display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line-strong);font-size:var(--text-sm);font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:999px}
+    .btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
     .btn-secondary{background:var(--surface)}
-    .hero-visual{min-height:320px;border:2px solid var(--line-strong);background:linear-gradient(180deg,var(--paper-2),var(--paper-3));position:relative;overflow:hidden;border-radius:var(--radius);box-shadow:var(--shadow-md)}
-    .geo-card{position:absolute;border:2px solid var(--line-strong)} .geo-a{inset:12% 48% 42% 8%;background:var(--graphite)} .geo-b{inset:26% 12% 20% 54%;background:var(--steel)} .geo-c{width:120px;height:120px;border-radius:50%;background:var(--cobalt);bottom:10%;left:12%} .geo-d{width:0;height:0;border-left:72px solid transparent;border-right:72px solid transparent;border-bottom:128px solid var(--gold);top:12%;right:12%;border-top:none}
+    .hero-visual{min-height:320px;border:1px solid var(--line-strong);background:linear-gradient(180deg,var(--paper-2),var(--paper-3));position:relative;overflow:hidden;border-radius:var(--radius);box-shadow:var(--shadow-md)}
+    .geo-card{position:absolute;border:1px solid color-mix(in srgb,var(--line-strong) 70%,transparent);background:color-mix(in srgb,var(--surface) 74%,transparent)}
+    .geo-a{inset:10% 44% 38% 8%}
+    .geo-b{inset:30% 10% 16% 50%}
+    .geo-c{width:118px;height:118px;border-radius:50%;background:color-mix(in srgb,var(--accent) 15%,var(--surface));bottom:12%;left:10%}
+    .geo-d{width:150px;height:150px;top:10%;right:10%;border-radius:1rem;background:color-mix(in srgb,var(--accent-2) 20%,var(--surface))}
     .proof-strip{list-style:none;display:grid;gap:var(--space-3);margin-top:var(--space-6)}
-    .proof-strip li{border:2px solid var(--line-strong);background:var(--surface);padding:var(--space-3) var(--space-4);font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .proof-strip li{border:1px solid var(--line-strong);background:var(--surface);padding:var(--space-3) var(--space-4);font-size:var(--text-xs);font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:999px}
     .sec-label{display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-6)}
-    .num-box{width:48px;height:48px;display:grid;place-items:center;background:var(--ink);color:var(--text-inverse);font-family:var(--font-display);font-weight:700}
+    .num-box{width:48px;height:48px;display:grid;place-items:center;background:var(--ink);color:var(--text-inverse);font-family:var(--font-display);font-weight:700;border-radius:.5rem}
     .sec-label h2{font-size:var(--text-xl)}
     .section-intro{margin-bottom:var(--space-6)}
     .card-grid,.stack-grid,.faq-grid{display:grid;gap:var(--space-4)}
-    .card,.stack-item,.faq-item,.contact-card,.form-card{border:2px solid var(--line-strong);background:var(--surface);border-radius:var(--radius);padding:var(--space-5);box-shadow:var(--shadow-sm)}
+    .card,.stack-item,.faq-item,.contact-card,.form-card{border:1px solid var(--line-strong);background:var(--surface);border-radius:var(--radius);padding:var(--space-5);box-shadow:var(--shadow-sm)}
     .card h3,.stack-item h3{font-size:var(--text-lg);margin-bottom:var(--space-2)}
     .small{font-size:var(--text-sm)}
-    .products{background:linear-gradient(165deg,var(--graphite),#2a3142)} .products .sec-label h2,.products .section-intro,.products h3,.products p,.products .placeholder{color:#f7f8ff} .products .num-box{background:var(--gold);color:#0b0d17} .products .card{background:rgba(255,255,255,.06)}
-    .placeholder{font-size:var(--text-xs);font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.9;margin-top:var(--space-3)}
-    .faq-item button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:var(--space-3);font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-align:left;min-height:44px}
+    .products{background:transparent}
+    .placeholder{font-size:var(--text-xs);font-weight:700;letter-spacing:.05em;text-transform:uppercase;opacity:.9;margin-top:var(--space-3)}
+    .faq-item button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:var(--space-3);font-weight:700;letter-spacing:.03em;text-align:left;min-height:44px}
     .faq-item .faq-panel{padding-top:var(--space-3)}
     .faq-item [hidden]{display:none !important}
     .contact-sec{background:var(--surface-dark);color:var(--text-inverse)}
     .contact-sec p,.contact-sec .sec-label h2,.contact-sec h3,.contact-sec label,.contact-sec legend{color:var(--text-inverse)}
-    .contact-sec .num-box{background:var(--gold);color:#0b0d17}
+    .contact-sec .num-box{background:var(--accent-2);color:#0b0d17}
     .contact-grid{display:grid;gap:var(--space-4);margin-bottom:var(--space-8)}
     .contact-card{background:rgba(255,255,255,.04);border-color:rgba(244,241,234,.24)}
-    .contact-card-label{font-size:var(--text-xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+    .contact-card-label{font-size:var(--text-xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-2)}
     .contact-card-value a{text-decoration:underline;text-underline-offset:3px;word-break:break-word}
     .form-grid{display:grid;gap:var(--space-4)}
     .form-card{background:rgba(255,255,255,.05);border-color:rgba(244,241,234,.26)}
     .field{display:grid;gap:var(--space-2)}
-    .field input,.field select,.field textarea{min-height:44px;border:2px solid rgba(244,241,234,.4);background:#fff;color:#0b0d17;padding:var(--space-2) var(--space-3);border-radius:var(--radius-sm);font:inherit}
+    .field input,.field select,.field textarea{min-height:44px;border:1px solid rgba(244,241,234,.4);background:#fff;color:#0b0d17;padding:var(--space-2) var(--space-3);border-radius:var(--radius-sm);font:inherit}
     .field textarea{min-height:132px;resize:vertical}
     .fieldset-options{display:grid;gap:var(--space-2)}
     .fieldset-options label{min-height:44px;display:inline-flex;align-items:center;gap:var(--space-2)}
@@ -114,8 +118,8 @@
     .feedback{min-height:1.5em;font-weight:700}
     .success{color:#9ff9e2}
     .footer{padding:var(--space-8) 0;background:var(--paper)}
-    .footer-inner{display:grid;gap:var(--space-2);font-size:var(--text-xs);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted)}
-    @media (min-width:700px){
+    .footer-inner{display:grid;gap:var(--space-2);font-size:var(--text-xs);font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--text-muted)}
+    @media (min-width:768px){
       .container{width:min(calc(100% - 2*var(--space-6)),var(--max))}
       .hero-actions,.contact-cta-row{flex-direction:row;flex-wrap:wrap}
       .proof-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -124,18 +128,18 @@
       .form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
       .footer-inner{grid-template-columns:1fr auto}
     }
-    @media (min-width:980px){
+    @media (min-width:1280px){
       :root{--header-h:84px}
       .container{width:min(calc(100% - 2*var(--space-8)),var(--max))}
       .menu-toggle{display:none}
       .desktop-nav{display:flex}
       .nav-panel{display:none !important}
-      .hero-grid{grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr)}
+      .hero-grid{grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr)}
       .card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
     }
     @media (hover:hover){
-      .btn,.theme-toggle,.menu-toggle,.nav-link,.nav-cta,.desktop-nav a,.card,.stack-item,.faq-item,.contact-card,.form-card{transition:transform .16s cubic-bezier(.2,.8,.2,1),box-shadow .16s ease}
-      .btn:hover,.theme-toggle:hover,.menu-toggle:hover,.nav-link:hover,.nav-cta:hover,.desktop-nav a:hover{transform:translate(-1px,-1px);box-shadow:var(--shadow-md)}
+      .btn,.theme-toggle,.menu-toggle,.nav-link,.nav-cta,.desktop-nav a,.card,.stack-item,.faq-item,.contact-card,.form-card{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+      .btn:hover,.theme-toggle:hover,.menu-toggle:hover,.nav-link:hover,.nav-cta:hover,.desktop-nav a:hover{transform:translateY(-1px);box-shadow:var(--shadow-md)}
       .card:hover,.stack-item:hover,.faq-item:hover,.contact-card:hover,.form-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
     }
     @media (max-width:420px){.brand-sub{display:none}}
@@ -176,9 +180,9 @@
         </span>
       </a>
       <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="#products" data-nav-link>Products</a>
-        <a href="#industries" data-nav-link>Industries</a>
+        <a href="#products" data-nav-link>Categories</a>
         <a href="#procurement" data-nav-link>Process</a>
+        <a href="#projects" data-nav-link>Proof</a>
         <a href="#faq" data-nav-link>FAQ</a>
         <a href="#contact" class="cta" data-contact-intent="contact">Contact</a>
         <a href="#quote" class="cta primary" data-contact-intent="quote">Request a Quote</a>
@@ -209,9 +213,9 @@
     <section class="section hero" id="top">
       <div class="container hero-grid">
         <div>
-          <span class="tag">Established 2017 · Institutional Supply Support</span>
-          <h1>Precision distribution for <span class="accent">industry</span> and institutions.</h1>
-          <p class="section-intro">Prymm Enterprises supports procurement with disciplined sourcing, clear communication, and reliable category coverage across heavy equipment, agriculture, medical instruments, electronics, and wholesale essentials for private organizations and government institutions.</p>
+          <span class="tag">Statement · Established 2017 · Institutional Supply Support</span>
+          <h1>Reliable distribution for <span class="accent">critical categories</span>.</h1>
+          <p class="section-intro">Prymm Enterprises supports private organizations and government institutions with clear procurement communication, disciplined sourcing, and steady category coverage across heavy equipment, agriculture, medical instruments, electronics, and wholesale essentials.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#quote" data-contact-intent="quote">Request a Quote</a>
             <a class="btn btn-secondary" href="#products">Browse Categories</a>
@@ -230,8 +234,8 @@
 
     <section class="section products" id="products">
       <div class="container">
-        <div class="sec-label"><div class="num-box">01</div><h2>Products &amp; Catalog</h2></div>
-        <p class="section-intro">Core sectors structured for operational continuity, technical precision, and institutional procurement readiness.</p>
+        <div class="sec-label"><div class="num-box">01</div><h2>Explanation · Product Categories</h2></div>
+        <p class="section-intro">A clear category structure designed to simplify complex procurement needs into understandable options.</p>
         <div class="card-grid">
           <article class="card" data-interest="heavy-equipment"><h3>Heavy Equipment</h3><p>Distribution support for operational and industrial demand.</p></article>
           <article class="card" data-interest="agri-machinery"><h3>Agricultural Machinery</h3><p>Equipment categories supporting continuity and field-ready operations.</p></article>
@@ -246,8 +250,8 @@
 
     <section class="section" id="industries">
       <div class="container">
-        <div class="sec-label"><div class="num-box">02</div><h2>Industries &amp; Solutions</h2></div>
-        <p class="section-intro">Capability orientation for organizations that require reliable coordination from inquiry through category alignment.</p>
+        <div class="sec-label"><div class="num-box">02</div><h2>Value · Industries &amp; Solutions</h2></div>
+        <p class="section-intro">Sector-specific support keeps procurement aligned with your operational context from inquiry to follow-through.</p>
         <div class="stack-grid">
           <article class="stack-item"><h3>Government Institutions</h3><p>Professional procurement support with accountable communication and documentation readiness.</p></article>
           <article class="stack-item"><h3>Private Organizations</h3><p>Flexible category sourcing and scalable distribution support for operational continuity.</p></article>
@@ -259,7 +263,7 @@
 
     <section class="section" id="procurement">
       <div class="container">
-        <div class="sec-label"><div class="num-box">03</div><h2>Procurement Process</h2></div>
+        <div class="sec-label"><div class="num-box">03</div><h2>Process · Procurement Support</h2></div>
         <div class="stack-grid">
           <article class="stack-item"><h3>Step 1 · Share Requirements</h3><p>Submit quantity, category, and scope via the quote form or contact channels below.</p></article>
           <article class="stack-item"><h3>Step 2 · Clarify Scope</h3><p>Our team follows up on specifications, delivery constraints, and response preferences.</p></article>
@@ -272,7 +276,7 @@
 
     <section class="section" id="projects">
       <div class="container">
-        <div class="sec-label"><div class="num-box">04</div><h2>Trust &amp; Delivery Confidence</h2></div>
+        <div class="sec-label"><div class="num-box">04</div><h2>Proof · Trust &amp; Delivery Confidence</h2></div>
         <div class="stack-grid">
           <article class="stack-item"><h3>Operational Credibility</h3><p class="small">Prymm Enterprises has operated since 2017 as an importer, distributor, and wholesaler focused on accountable execution.</p></article>
           <article class="stack-item"><h3>Document-Ready Procurement Support</h3><p class="small">The quote workflow captures scope, category, response preference, and clarification notes to support structured follow-up.</p></article>
@@ -306,8 +310,8 @@
 
     <section class="section contact-sec" id="contact">
       <div class="container">
-        <div class="sec-label"><div class="num-box">07</div><h2>Contact &amp; Request a Quote</h2></div>
-        <p class="section-intro">For inquiries and procurement discussions, use your preferred channel or complete the quote form below.</p>
+        <div class="sec-label"><div class="num-box">07</div><h2>Action · Contact &amp; Request a Quote</h2></div>
+        <p class="section-intro">Share your requirements through your preferred channel or use the request form for structured follow-up.</p>
         <div class="contact-grid">
           <article class="contact-card"><p class="contact-card-label">Website</p><p class="contact-card-value"><a href="https://www.prymm.enterprises" target="_blank" rel="noopener noreferrer" data-contact-click="website">www.prymm.enterprises</a></p></article>
           <article class="contact-card"><p class="contact-card-label">Email</p><p class="contact-card-value"><a href="mailto:info@prymm.enterprises" data-contact-click="email">info@prymm.enterprises</a></p></article>
@@ -421,9 +425,9 @@
         if (event.key === 'Escape' && menu && menu.classList.contains('open')) closeMenu(true);
       });
       document.querySelectorAll('.nav-panel a').forEach(link => link.addEventListener('click', () => closeMenu(false)));
-      window.addEventListener('resize', () => { if (window.innerWidth >= 980) closeMenu(false); });
+      window.addEventListener('resize', () => { if (window.innerWidth >= 1280) closeMenu(false); });
 
-      const sectionIds = ['products','industries','procurement','resources','faq','contact'];
+      const sectionIds = ['products','industries','procurement','projects','resources','faq','contact'];
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (!entry.isIntersecting) return;
