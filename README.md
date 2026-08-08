@@ -31,7 +31,7 @@ To avoid defaulting to any preferred style, the redesign style was selected usin
 ## Design System (Professional, Corporate, Vibrant)
 - Visual direction: **Geometric Minimal Grid** with corporate clarity and energetic restraint.
 - Foundation: disciplined neutral surfaces with strategic vibrant accents:
-  - Primary accent: `#0d6efd`
+  - Primary accent: `#0b5fe9`
   - Secondary accent: `#00b8a9`
   - Support accent: `#ff7a18`
 - Typography roles:
@@ -40,6 +40,13 @@ To avoid defaulting to any preferred style, the redesign style was selected usin
 - Narrative flow: arrival → capability → sectors → process → proof/resources → final CTA.
 - Motion: purposeful micro-interactions only; fully disabled with `prefers-reduced-motion`.
 - Themes: light and dark modes via `data-theme` toggle.
+
+## Premium + Vibrant Refinement Layer
+- Refined typography rhythm: tighter heading cadence, elevated spacing rhythm, and stronger section punctuation.
+- Surface hierarchy: deeper premium shadows, polished borders, and accent-led top-edge detailing on capability/proof cards.
+- Vibrancy strategy: controlled cobalt/teal/amber moments applied by section (`data-tone`) for contrast without visual clutter.
+- CTA uplift: stronger gradient and depth treatment for primary actions while keeping form/contact trust cues clear.
+- Interaction polish: hover/active transitions tuned with restrained easing, preserving keyboard visibility and reduced-motion behavior.
 
 ## Editable Content Areas
 Look for **"Editable content placeholder"** text in `index.html`. Replace only with verified business facts:
@@ -90,6 +97,7 @@ Look for **"Editable content placeholder"** text in `index.html`. Replace only w
 ## Validation Steps Used In This Repository
 - Static integrity check: Python `html.parser` parse + internal anchor target check for `index.html`
 - Inline JS syntax check: `node --check` against extracted inline script
+- Responsive QA pass: reviewed 375px, 768px, and 1280px layouts for no horizontal overflow and stable section rhythm
 
 ## Analytics Configuration
 The site emits privacy-conscious `dataLayer` events only:
