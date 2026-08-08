@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Prymm Enterprises | Industrial, Agricultural, Medical & Electronics Distribution</title>
   <meta name="description" content="Prymm Enterprises is an importer, distributor, and wholesaler established in 2017 serving private organizations and government institutions.">
-  <meta name="theme-color" content="#0b0d17">
+  <meta name="theme-color" content="#0d1017">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://www.prymm.enterprises/">
   <meta property="og:type" content="website">
@@ -23,133 +23,162 @@
     :root,[data-theme="light"]{
       --font-display:'Cabinet Grotesk','Helvetica Neue',Arial,sans-serif;
       --font-body:'Satoshi','Inter','Helvetica Neue',Arial,sans-serif;
-      --text-xs:clamp(.75rem,.71rem + .2vw,.875rem);
+      --text-xs:clamp(.75rem,.72rem + .16vw,.875rem);
       --text-sm:clamp(.875rem,.84rem + .2vw,1rem);
-      --text-base:clamp(1rem,.95rem + .22vw,1.125rem);
-      --text-lg:clamp(1.15rem,1.02rem + .6vw,1.45rem);
-      --text-xl:clamp(1.65rem,1.28rem + 1.15vw,2.3rem);
-      --text-2xl:clamp(2.15rem,1.6rem + 2.1vw,3.85rem);
+      --text-base:clamp(1rem,.95rem + .2vw,1.125rem);
+      --text-lg:clamp(1.2rem,1.06rem + .52vw,1.46rem);
+      --text-xl:clamp(1.72rem,1.35rem + 1vw,2.3rem);
+      --text-2xl:clamp(2.2rem,1.52rem + 2.2vw,3.85rem);
       --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;
-      --base:#f5f7fb;--surface:#ffffff;--surface-soft:#eef2f9;--line:rgba(24,35,56,.12);--line-strong:rgba(24,35,56,.2);
-      --ink:#0d182d;--muted:#40506f;--inverse:#f6f8fd;--surface-deep:#081024;
-      --accent:#0b5fe9;--accent-2:#2c8f84;--accent-3:#a86822;
-      --shadow-sm:0 12px 28px rgba(11,23,45,.08);--shadow-md:0 24px 54px rgba(11,23,45,.15);
-      --shadow-lg:0 36px 78px rgba(8,22,50,.18);
-      --radius:.95rem;--radius-sm:.75rem;--max:1200px;--header-h:80px;
+      --base:#f4f6fa;--surface:#fff;--surface-2:#edf1f8;--deep:#0f1420;
+      --ink:#131b2a;--muted:#4d5f7c;--line:rgba(16,27,44,.13);--line-strong:rgba(16,27,44,.23);
+      --accent:#1a4fb7;--accent-alt:#6f5b3e;--accent-soft:#9db6eb;
+      --success:#b8ffe4;
+      --radius-sm:.65rem;--radius:.95rem;--max:1200px;--header-h:80px;
+      --shadow-sm:0 14px 32px rgba(9,18,37,.08);
+      --shadow-md:0 24px 56px rgba(9,18,37,.14);
     }
     [data-theme="dark"]{
-      --base:#081021;--surface:#0d1830;--surface-soft:#12213f;--line:rgba(221,232,255,.15);--line-strong:rgba(221,232,255,.25);
-      --ink:#ecf2ff;--muted:#bfd0f6;--inverse:#081021;--surface-deep:#040a17;
-      --shadow-sm:0 14px 34px rgba(0,0,0,.34);--shadow-md:0 22px 58px rgba(0,0,0,.42);
+      --base:#090f1c;--surface:#0f182b;--surface-2:#152038;--deep:#050911;
+      --ink:#ecf1fb;--muted:#b7c6e4;--line:rgba(220,229,248,.15);--line-strong:rgba(220,229,248,.3);
+      --accent:#7fa8ff;--accent-alt:#c5ad89;--accent-soft:#2a3f66;
+      --shadow-sm:0 16px 36px rgba(0,0,0,.38);
+      --shadow-md:0 26px 66px rgba(0,0,0,.46);
     }
     *,:before,:after{box-sizing:border-box;margin:0;padding:0}
     html{-webkit-text-size-adjust:none;text-size-adjust:none;scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + var(--space-4));}
-    body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;background:var(--base);color:var(--ink);overflow-x:hidden}
+    body{min-height:100dvh;overflow-x:hidden;font-family:var(--font-body);font-size:var(--text-base);line-height:1.64;background:var(--base);color:var(--ink)}
+    h1,h2,h3{font-family:var(--font-display);line-height:1.07;letter-spacing:-.02em;text-wrap:balance}
     p{max-width:72ch;color:var(--muted);overflow-wrap:anywhere}
-    h1,h2,h3{font-family:var(--font-display);line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
-    a{text-decoration:none;color:inherit}
-    button{font:inherit;border:none;background:none;color:inherit;cursor:pointer}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
     :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:var(--radius-sm)}
-    .skip-link{position:absolute;left:var(--space-4);top:-120px;background:var(--accent);color:#fff;padding:var(--space-3) var(--space-4);z-index:1000;border-radius:var(--radius-sm);font-weight:700}
+
+    .skip-link{position:absolute;left:var(--space-4);top:-120px;background:var(--accent);color:#fff;padding:var(--space-3) var(--space-4);z-index:120;border-radius:var(--radius-sm);font-weight:700}
     .skip-link:focus{top:var(--space-4)}
     .container{width:min(calc(100% - 2*var(--space-4)),var(--max));margin-inline:auto}
-    .section{padding:clamp(var(--space-12),8vw,var(--space-20)) 0;border-bottom:1px solid var(--line)}
-    .section[data-tone]{position:relative}
-    .header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--base) 84%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-strong)}
+
+    .header{position:sticky;top:0;z-index:80;background:color-mix(in srgb,var(--base) 86%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-strong)}
     .header-inner{min-height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
     .brand{display:flex;align-items:center;gap:var(--space-3)}
-    .brand-mark{width:42px;height:42px;border-radius:.55rem;background:var(--accent);box-shadow:none;border:1px solid color-mix(in srgb,var(--accent) 35%,#fff)}
+    .brand-mark{width:42px;height:42px;border-radius:.55rem;background:linear-gradient(145deg,var(--accent),color-mix(in srgb,var(--accent) 75%,#fff));border:1px solid color-mix(in srgb,var(--accent) 42%,#fff)}
     .brand-name{font-family:var(--font-display);font-size:var(--text-sm);font-weight:700;letter-spacing:.05em;text-transform:uppercase}
     .brand-sub{font-size:var(--text-xs);color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+
     .header-actions{display:flex;align-items:center;gap:var(--space-2)}
-    .theme-toggle,.menu-toggle{min-width:44px;min-height:44px;display:grid;place-items:center;border:1px solid var(--line-strong);background:var(--surface);border-radius:var(--radius-sm);box-shadow:var(--shadow-sm)}
+    .theme-toggle,.menu-toggle{min-width:44px;min-height:44px;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--radius-sm);box-shadow:var(--shadow-sm)}
+
     .desktop-nav{display:none;align-items:center;gap:var(--space-2)}
-    .desktop-nav a{min-height:44px;padding:var(--space-3) var(--space-4);display:inline-flex;align-items:center;font-size:var(--text-xs);font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:999px}
-    .desktop-nav a[aria-current="true"]{background:var(--surface-soft);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 24%,transparent);color:var(--accent)}
+    .desktop-nav a{min-height:44px;padding:var(--space-3) var(--space-4);display:inline-flex;align-items:center;border-radius:999px;font-size:var(--text-xs);font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+    .desktop-nav a[aria-current="true"]{background:var(--surface-2);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 36%,transparent);color:var(--accent)}
     .desktop-nav .cta{border:1px solid var(--line-strong)}
-    .desktop-nav .cta.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
-    .nav-panel{position:fixed;top:var(--header-h);left:0;right:0;background:color-mix(in srgb,var(--base) 96%,transparent);border-bottom:1px solid var(--line-strong);padding:var(--space-4);z-index:45}
+    .desktop-nav .cta.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+
+    .nav-panel{position:fixed;top:var(--header-h);left:0;right:0;z-index:70;padding:var(--space-4);background:color-mix(in srgb,var(--base) 95%,transparent);border-bottom:1px solid var(--line-strong)}
     .nav-panel[hidden]{display:none}
     .nav-list{list-style:none;display:grid;gap:var(--space-2)}
-    .nav-link,.nav-cta{min-height:44px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line-strong);background:var(--surface);font-size:var(--text-sm);font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:999px}
+    .nav-link,.nav-cta{min-height:44px;display:flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);font-size:var(--text-sm);font-weight:700;letter-spacing:.05em;text-transform:uppercase}
     .nav-cta.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
-    .hero{min-height:calc(100dvh - var(--header-h));display:flex;align-items:center}
-    .hero-grid{display:grid;gap:var(--space-8)}
-    .eyebrow{display:inline-flex;align-items:center;gap:var(--space-2);font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:var(--space-2) var(--space-4);border-radius:999px;border:1px solid var(--line-strong);background:var(--surface)}
-    .hero h1{font-size:var(--text-2xl);max-width:14ch}
-    .accent{color:var(--accent)}
-    .hero-actions,.contact-cta-row{display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-6)}
-    .btn{min-height:44px;padding:0 var(--space-5);display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid var(--line-strong);font-size:var(--text-sm);font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:var(--surface)}
-    .btn-primary{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:none}
-    .hero-proof{list-style:none;display:grid;gap:var(--space-3);margin-top:var(--space-6)}
-    .hero-proof li{padding:var(--space-3) var(--space-4);border-radius:var(--radius-sm);border:1px solid var(--line-strong);background:var(--surface);font-size:var(--text-xs);font-weight:700;letter-spacing:.05em;text-transform:uppercase}
-    .hero-panel{border:1px solid var(--line-strong);background:var(--surface);border-radius:var(--radius);padding:var(--space-6);box-shadow:var(--shadow-sm)}
-    .hero-metrics{list-style:none;display:grid;gap:var(--space-3)}
-    .hero-metrics li{display:grid;gap:var(--space-1);padding:var(--space-4);border-radius:var(--radius-sm);background:color-mix(in srgb,var(--surface-soft) 80%,transparent);border:1px solid var(--line)}
-    .metric-label{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--muted)}
-    .metric-value{font-family:var(--font-display);font-size:var(--text-lg)}
-    .section-head{display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-6)}
-    .section-index{width:48px;height:48px;display:grid;place-items:center;border-radius:.7rem;background:var(--surface);color:var(--accent);font-family:var(--font-display);font-weight:700;border:1px solid var(--line-strong)}
-    .section-head h2{font-size:var(--text-xl)}
+
+    .section{padding:clamp(var(--space-12),8vw,var(--space-20)) 0;border-bottom:1px solid var(--line)}
+    .section-header{display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-6)}
+    .section-index{width:48px;height:48px;display:grid;place-items:center;border-radius:.7rem;border:1px solid var(--line-strong);background:var(--surface);font-family:var(--font-display);font-weight:700;color:var(--accent)}
+    .section-header h2{font-size:var(--text-xl)}
     .section-intro{margin-bottom:var(--space-6)}
-    .card-grid,.stack-grid,.faq-grid{display:grid;gap:var(--space-4)}
-    .card,.stack-item,.faq-item,.contact-card,.form-card{background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--radius);padding:var(--space-5);box-shadow:var(--shadow-sm)}
-    .card,.stack-item{position:relative}
-    .card h3,.stack-item h3{font-size:var(--text-lg);margin-bottom:var(--space-2)}
+
+    .hero{min-height:calc(100dvh - var(--header-h));display:flex;align-items:center;border-bottom:1px solid var(--line-strong)}
+    .hero-grid{display:grid;gap:var(--space-8)}
+    .eyebrow{display:inline-flex;align-items:center;min-height:44px;gap:var(--space-2);padding:0 var(--space-4);border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .hero h1{font-size:var(--text-2xl);max-width:14ch;margin-top:var(--space-5)}
+    .hero h1 .accent{color:var(--accent)}
+    .hero-actions,.contact-cta-row{display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-6)}
+    .btn{min-height:44px;padding:0 var(--space-5);display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);font-size:var(--text-sm);font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+    .btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+
+    .hero-trust{list-style:none;display:grid;gap:var(--space-3);margin-top:var(--space-6)}
+    .hero-trust li{padding:var(--space-3) var(--space-4);border-radius:var(--radius-sm);border:1px solid var(--line-strong);background:var(--surface);font-size:var(--text-xs);font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+
+    .hero-aside{display:grid;gap:var(--space-4)}
+    .metric-panel,.signal-panel{padding:var(--space-6);border-radius:var(--radius);border:1px solid var(--line-strong);background:var(--surface);box-shadow:var(--shadow-sm)}
+    .metric-list{list-style:none;display:grid;gap:var(--space-4)}
+    .metric-list li{padding-bottom:var(--space-4);border-bottom:1px solid var(--line)}
+    .metric-list li:last-child{padding-bottom:0;border-bottom:none}
+    .metric-label{display:block;font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+    .metric-value{display:block;margin-top:var(--space-1);font-family:var(--font-display);font-size:var(--text-lg)}
+    .signal-panel h3{font-size:var(--text-lg);margin-bottom:var(--space-2)}
+
+    .capability-grid,.sector-grid,.process-grid,.proof-grid,.faq-grid{display:grid;gap:var(--space-4)}
+    .card,.step,.proof-item,.faq-item,.contact-card,.form-card{background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--radius);padding:var(--space-5);box-shadow:var(--shadow-sm)}
+    .card h3,.step h3,.proof-item h3{font-size:var(--text-lg);margin-bottom:var(--space-2)}
     .small{font-size:var(--text-sm)}
-    .placeholder{margin-top:var(--space-3);font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+    .placeholder{margin-top:var(--space-3);font-size:var(--text-xs);font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+
+    #products .card:nth-child(2n){background:linear-gradient(180deg,var(--surface),color-mix(in srgb,var(--surface-2) 70%,transparent))}
+    #procurement .step{border-left:3px solid color-mix(in srgb,var(--accent) 42%,transparent)}
+    #projects .proof-item:nth-child(2){border-top:3px solid color-mix(in srgb,var(--accent-alt) 54%,transparent)}
+
     .faq-item button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);min-height:44px;text-align:left;font-weight:700}
     .faq-panel{padding-top:var(--space-3)}
-    .contact-sec{background:var(--surface-deep);color:var(--inverse)}
-    .contact-sec p,.contact-sec h2,.contact-sec h3,.contact-sec label,.contact-sec legend{color:var(--inverse)}
-    .contact-sec .section-index{background:transparent;color:var(--inverse);border-color:rgba(231,239,255,.3)}
+
+    .contact{background:var(--deep);color:#f0f5ff}
+    .contact p,.contact h2,.contact h3,.contact label,.contact legend{color:#f0f5ff}
+    .contact .section-index{background:transparent;border-color:rgba(240,245,255,.32);color:#f0f5ff}
+    .contact .contact-card,.contact .form-card{background:rgba(255,255,255,.06);border-color:rgba(240,245,255,.28)}
     .contact-grid{display:grid;gap:var(--space-4);margin-bottom:var(--space-8)}
-    .contact-card,.form-card{background:rgba(255,255,255,.06);border-color:rgba(231,239,255,.26)}
-    .contact-card-label{font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#d6e4ff}
+    .contact-card-label{font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#d9e5ff}
     .contact-card-value a{text-decoration:underline;text-underline-offset:3px;word-break:break-word}
+
     .form-grid{display:grid;gap:var(--space-4)}
     .field{display:grid;gap:var(--space-2)}
-    .field input,.field select,.field textarea{min-height:44px;border-radius:var(--radius-sm);border:1px solid rgba(230,237,255,.45);background:#fff;color:#101626;padding:var(--space-2) var(--space-3);font:inherit}
+    .field input,.field select,.field textarea{min-height:44px;padding:var(--space-2) var(--space-3);border-radius:var(--radius-sm);border:1px solid rgba(235,242,255,.46);background:#fff;color:#131a29;font:inherit}
     .field textarea{min-height:132px;resize:vertical}
     .fieldset-options{display:grid;gap:var(--space-2)}
     .fieldset-options label{min-height:44px;display:inline-flex;align-items:center;gap:var(--space-2)}
     .error,.hint,.feedback{font-size:var(--text-xs)}
-    .error{color:#ffd7ce;font-weight:700}
-    .hidden-honeypot{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .error{font-weight:700;color:#ffd9d1}
     .feedback{min-height:1.5em;font-weight:700}
-    .success{color:#b9ffe9}
+    .success{color:var(--success)}
+    .hidden-honeypot{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+
     .footer{padding:var(--space-8) 0;background:var(--base)}
     .footer-inner{display:grid;gap:var(--space-2);font-size:var(--text-xs);font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+
     @media (min-width:768px){
       .container{width:min(calc(100% - 2*var(--space-6)),var(--max))}
+      .hero-grid{grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);align-items:end}
       .hero-actions,.contact-cta-row{flex-direction:row;flex-wrap:wrap}
-      .hero-proof{grid-template-columns:repeat(3,minmax(0,1fr))}
-      .card-grid,.stack-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .hero-trust{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .capability-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .sector-grid,.process-grid,.proof-grid,.faq-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
       .contact-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
       .form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
       .footer-inner{grid-template-columns:1fr auto}
     }
+
     @media (min-width:1280px){
       :root{--header-h:84px}
       .container{width:min(calc(100% - 2*var(--space-8)),var(--max))}
       .menu-toggle{display:none}
       .desktop-nav{display:flex}
-      .hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(360px,.85fr)}
-      .card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .capability-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .process-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+      .proof-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
       .nav-panel{display:none !important}
     }
+
     @media (max-width:420px){.brand-sub{display:none}}
-    .section[data-tone="cobalt"]{border-top:2px solid color-mix(in srgb,var(--accent) 45%,transparent)}
-    .section[data-tone="teal"]{border-top:2px solid color-mix(in srgb,var(--accent-2) 38%,transparent)}
-    .section[data-tone="amber"]{border-top:2px solid color-mix(in srgb,var(--accent-3) 42%,transparent)}
+
     @media (hover:hover){
-      .btn,.theme-toggle,.menu-toggle,.nav-link,.nav-cta,.desktop-nav a,.card,.stack-item,.faq-item,.contact-card,.form-card{transition:transform .2s cubic-bezier(.2,.7,.2,1),box-shadow .2s cubic-bezier(.2,.7,.2,1),border-color .2s ease,background-color .2s ease}
+      .btn,.theme-toggle,.menu-toggle,.nav-link,.nav-cta,.desktop-nav a,.card,.step,.proof-item,.faq-item,.contact-card,.form-card{transition:transform .2s cubic-bezier(.2,.7,.2,1),box-shadow .2s cubic-bezier(.2,.7,.2,1),border-color .2s ease,background-color .2s ease}
       .btn:hover,.theme-toggle:hover,.menu-toggle:hover,.nav-link:hover,.nav-cta:hover,.desktop-nav a:hover{transform:translateY(-1px);box-shadow:var(--shadow-md)}
-      .btn-primary:hover{box-shadow:0 10px 22px color-mix(in srgb,var(--accent) 24%,transparent)}
       .btn:active,.theme-toggle:active,.menu-toggle:active,.nav-link:active,.nav-cta:active,.desktop-nav a:active{transform:translateY(0)}
-      .card:hover,.stack-item:hover,.faq-item:hover,.contact-card:hover,.form-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:color-mix(in srgb,var(--accent) 24%,var(--line-strong))}
+      .card:hover,.step:hover,.proof-item:hover,.faq-item:hover,.contact-card:hover,.form-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);border-color:color-mix(in srgb,var(--accent) 34%,var(--line-strong))}
     }
-    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none !important;transition:none !important}}
+
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *{animation:none !important;transition:none !important}
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -175,6 +204,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Prymm Enterprises home">
@@ -184,8 +214,9 @@
           <span class="brand-sub">Importer · Distributor · Wholesaler</span>
         </span>
       </a>
+
       <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="#products" data-nav-link>Categories</a>
+        <a href="#products" data-nav-link>Capabilities</a>
         <a href="#industries" data-nav-link>Sectors</a>
         <a href="#procurement" data-nav-link>Process</a>
         <a href="#projects" data-nav-link>Proof</a>
@@ -193,6 +224,7 @@
         <a href="#contact" class="cta" data-contact-intent="contact">Contact</a>
         <a href="#quote" class="cta primary" data-contact-intent="quote">Request a Quote</a>
       </nav>
+
       <div class="header-actions">
         <button class="theme-toggle" type="button" aria-label="Switch to dark mode" data-theme-toggle>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79"></path></svg>
@@ -202,12 +234,13 @@
         </button>
       </div>
     </div>
+
     <nav class="nav-panel" id="mobile-menu" aria-label="Mobile navigation" hidden>
       <ul class="nav-list">
-        <li><a class="nav-link" href="#products" data-nav-link>Products</a></li>
+        <li><a class="nav-link" href="#products" data-nav-link>Capabilities</a></li>
         <li><a class="nav-link" href="#industries" data-nav-link>Sectors</a></li>
         <li><a class="nav-link" href="#procurement" data-nav-link>Process</a></li>
-        <li><a class="nav-link" href="#resources" data-nav-link>Resources</a></li>
+        <li><a class="nav-link" href="#projects" data-nav-link>Proof</a></li>
         <li><a class="nav-link" href="#faq" data-nav-link>FAQ</a></li>
         <li><a class="nav-cta" href="#contact" data-contact-intent="contact">Contact</a></li>
         <li><a class="nav-cta primary" href="#quote" data-contact-intent="quote">Request a Quote</a></li>
@@ -219,114 +252,134 @@
     <section class="section hero" id="top">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Professional Supply Partner · Established 2017</span>
-          <h1>Procurement-ready distribution for <span class="accent">critical sectors</span>.</h1>
-          <p class="section-intro">Prymm Enterprises supports private organizations and government institutions with category-focused sourcing, responsive procurement coordination, and accountable communication across industrial, agricultural, medical, electronics, and wholesale needs.</p>
+          <span class="eyebrow">Established 2017 · Procurement-focused distribution</span>
+          <h1>Reliable category sourcing with <span class="accent">precision communication</span>.</h1>
+          <p class="section-intro">Prymm Enterprises supports private organizations and government institutions with clear requirement intake, disciplined follow-through, and practical product-category coordination across industrial, agricultural, medical, electronics, and wholesale demand.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#quote" data-contact-intent="quote">Request a Quote</a>
-            <a class="btn" href="#products">View Product Categories</a>
+            <a class="btn" href="#products">Explore Capabilities</a>
           </div>
-          <ul class="hero-proof" aria-label="Trust highlights">
-            <li>Established 2017</li>
+          <ul class="hero-trust" aria-label="Trust highlights">
             <li>Importer · Distributor · Wholesaler</li>
-            <li>Private + Government Supply Support</li>
+            <li>Private and government support</li>
+            <li>Structured quote intake workflow</li>
           </ul>
         </div>
-        <aside class="hero-panel" aria-label="Operational reliability indicators">
-          <ul class="hero-metrics">
-            <li><span class="metric-label">Core Category Coverage</span><span class="metric-value">Industrial to Wholesale Essentials</span></li>
-            <li><span class="metric-label">Procurement Orientation</span><span class="metric-value">Structured inquiry and scope clarification</span></li>
-            <li><span class="metric-label">Response Channel Flexibility</span><span class="metric-value">Email or phone follow-up options</span></li>
-          </ul>
+
+        <aside class="hero-aside" aria-label="Operational overview">
+          <div class="metric-panel">
+            <ul class="metric-list">
+              <li><span class="metric-label">Coverage</span><span class="metric-value">Industrial to wholesale essentials</span></li>
+              <li><span class="metric-label">Process style</span><span class="metric-value">Clear specification and scope alignment</span></li>
+              <li><span class="metric-label">Response channels</span><span class="metric-value">Email or phone follow-up</span></li>
+            </ul>
+          </div>
+          <div class="signal-panel">
+            <h3>Procurement clarity at first contact</h3>
+            <p class="small">Inquiry fields capture core requirements to support faster and more consistent review.</p>
+          </div>
         </aside>
       </div>
     </section>
 
-    <section class="section" id="products" data-tone="cobalt">
+    <section class="section" id="products">
       <div class="container">
-        <div class="section-head"><div class="section-index">01</div><h2>Capability · Product Categories</h2></div>
-        <p class="section-intro">A disciplined category framework helps teams map requirements quickly and move procurement forward with less ambiguity.</p>
-        <div class="card-grid">
+        <div class="section-header">
+          <div class="section-index">01</div>
+          <h2>Capability Overview</h2>
+        </div>
+        <p class="section-intro">A coherent category structure helps procurement teams map technical needs quickly and proceed with fewer ambiguities.</p>
+
+        <div class="capability-grid">
           <article class="card" data-interest="heavy-equipment"><h3>Heavy Equipment</h3><p>Distribution support for industrial and operational demand where reliability matters.</p></article>
-          <article class="card" data-interest="agri-machinery"><h3>Agricultural Machinery</h3><p>Equipment categories aligned to continuity-focused field and production operations.</p></article>
-          <article class="card" data-interest="medical-instruments"><h3>Medical Instruments</h3><p>Category support for institutional procurement requiring dependable specification handling.</p></article>
+          <article class="card" data-interest="agri-machinery"><h3>Agricultural Machinery</h3><p>Category support for continuity-focused field and production operations.</p></article>
+          <article class="card" data-interest="medical-instruments"><h3>Medical Instruments</h3><p>Support for institutional procurement requiring dependable specification handling.</p></article>
           <article class="card" data-interest="digital-goods"><h3>Digital Goods &amp; Electronics</h3><p>Modern electronics and digital products for evolving technical and business requirements.</p></article>
-          <article class="card" data-interest="office-supplies"><h3>Office &amp; Wholesale Essentials</h3><p>Broad supply categories that support day-to-day organizational readiness.</p></article>
-          <article class="card" data-interest="sound-systems"><h3>Professional Sound Systems</h3><p>Specialized audio system categories for professional implementation needs.</p></article>
+          <article class="card" data-interest="office-supplies"><h3>Office &amp; Wholesale Essentials</h3><p>Broad supply categories supporting daily organizational readiness.</p></article>
+          <article class="card" data-interest="sound-systems"><h3>Professional Sound Systems</h3><p>Specialized audio categories for professional implementation needs.</p></article>
         </div>
         <p class="placeholder">Editable content placeholder: add approved SKU-level catalog tables or downloadable product sheets when available.</p>
       </div>
     </section>
 
-    <section class="section" id="industries" data-tone="teal">
+    <section class="section" id="industries">
       <div class="container">
-        <div class="section-head"><div class="section-index">02</div><h2>Sector Focus · Institutional and Private Requirements</h2></div>
-        <p class="section-intro">Category matching and communication discipline support procurement teams across varied operating contexts.</p>
-        <div class="stack-grid">
-          <article class="stack-item"><h3>Government Institutions</h3><p>Structured handling for institutional procurement with documentation-conscious follow-through.</p></article>
-          <article class="stack-item"><h3>Private Organizations</h3><p>Practical sourcing support for businesses balancing speed, continuity, and evolving requirements.</p></article>
-          <article class="stack-item"><h3>Industrial Operations</h3><p>Category coverage designed for operations where specification clarity influences project stability.</p></article>
-          <article class="stack-item"><h3>Healthcare &amp; Technical Units</h3><p>Supply alignment support where dependable communication and category confidence are essential.</p></article>
+        <div class="section-header">
+          <div class="section-index">02</div>
+          <h2>Industry Sectors</h2>
+        </div>
+        <p class="section-intro">Prymm Enterprises supports mixed institutional and private procurement contexts with practical communication and category matching.</p>
+
+        <div class="sector-grid">
+          <article class="card"><h3>Government Institutions</h3><p>Structured handling for institutional procurement with documentation-conscious coordination.</p></article>
+          <article class="card"><h3>Private Organizations</h3><p>Sourcing support for teams balancing speed, continuity, and evolving requirements.</p></article>
+          <article class="card"><h3>Industrial Operations</h3><p>Category coverage designed for projects where specification clarity supports stability.</p></article>
+          <article class="card"><h3>Healthcare &amp; Technical Units</h3><p>Procurement support where dependable communication is critical to execution.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="procurement" data-tone="amber">
+    <section class="section" id="procurement">
       <div class="container">
-        <div class="section-head"><div class="section-index">03</div><h2>Procurement Workflow · From Requirements to Coordination</h2></div>
-        <div class="stack-grid">
-          <article class="stack-item"><h3>Step 1 · Submit Requirements</h3><p>Share quantity, category, and scope through the quote form or direct contact channels.</p></article>
-          <article class="stack-item"><h3>Step 2 · Clarify Specifications</h3><p>Follow-up focuses on scope details, operational constraints, and response preferences.</p></article>
-          <article class="stack-item"><h3>Step 3 · Review Quotation Details</h3><p>Receive category recommendations and quotation information for procurement review.</p></article>
-          <article class="stack-item"><h3>Step 4 · Confirm Next Actions</h3><p>Finalize coordination through your chosen response channel for structured continuity.</p></article>
+        <div class="section-header">
+          <div class="section-index">03</div>
+          <h2>Procurement Process</h2>
+        </div>
+        <p class="section-intro">A concise workflow from initial requirements to next-step coordination.</p>
+
+        <div class="process-grid">
+          <article class="step"><h3>Step 1 · Submit requirements</h3><p>Share category, quantity or scope, and response preference through form, phone, or email.</p></article>
+          <article class="step"><h3>Step 2 · Clarify specifications</h3><p>Follow-up confirms constraints, context, and required details for alignment.</p></article>
+          <article class="step"><h3>Step 3 · Review quotation details</h3><p>Receive category recommendations and quotation information for internal review.</p></article>
+          <article class="step"><h3>Step 4 · Confirm next actions</h3><p>Finalize communication path for continuity and implementation planning.</p></article>
         </div>
         <p class="placeholder">Editable content placeholder: insert officially approved procurement documents or timeline references only after validation.</p>
       </div>
     </section>
 
-    <section class="section" id="projects" data-tone="cobalt">
+    <section class="section" id="projects">
       <div class="container">
-        <div class="section-head"><div class="section-index">04</div><h2>Proof · Trust Signals and Delivery Confidence</h2></div>
-        <div class="stack-grid">
-          <article class="stack-item"><h3>Operating Since 2017</h3><p class="small">Prymm Enterprises has operated as an importer, distributor, and wholesaler since 2017.</p></article>
-          <article class="stack-item"><h3>Structured Quote Intake</h3><p class="small">Inquiry capture includes category, quantity or scope, organization type, and preferred response method.</p></article>
-          <article class="stack-item"><h3>Case Study Archive (Placeholder)</h3><p class="small">Reserved for future approved project documentation.</p><p class="placeholder">Editable content placeholder: add verified project names, dates, and measurable outcomes after approval.</p></article>
+        <div class="section-header">
+          <div class="section-index">04</div>
+          <h2>Trust &amp; Proof</h2>
+        </div>
+
+        <div class="proof-grid">
+          <article class="proof-item"><h3>Operating Since 2017</h3><p class="small">Prymm Enterprises has operated as an importer, distributor, and wholesaler since 2017.</p></article>
+          <article class="proof-item"><h3>Structured Inquiry Capture</h3><p class="small">Forms capture category, quantity or scope, customer type, and preferred response method.</p></article>
+          <article class="proof-item"><h3>Case Study Archive (Placeholder)</h3><p class="small">Reserved for future approved project documentation.</p><p class="placeholder">Editable content placeholder: add verified project names, dates, and measurable outcomes after approval.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="resources" data-tone="teal">
+    <section class="section" id="faq">
       <div class="container">
-        <div class="section-head"><div class="section-index">05</div><h2>Resources · Company Profile and Inquiry Support</h2></div>
-        <p class="section-intro">Resources help procurement teams gather business context before finalizing requests.</p>
-        <div class="stack-grid">
-          <article class="stack-item"><h3>Company Profile</h3><p>Summary of business scope as importer, distributor, and wholesaler established in 2017.</p><button class="btn" type="button" data-profile-download>Company Profile PDF (Placeholder)</button></article>
-          <article class="stack-item"><h3>Pre-Inquiry Checklist</h3><p>Prepare category, quantity, and desired response method to accelerate follow-up quality.</p></article>
+        <div class="section-header">
+          <div class="section-index">05</div>
+          <h2>FAQ</h2>
         </div>
-        <p class="placeholder">Editable content placeholder: replace profile placeholder with an approved file path once published.</p>
-      </div>
-    </section>
-
-    <section class="section" id="faq" data-tone="amber">
-      <div class="container">
-        <div class="section-head"><div class="section-index">06</div><h2>FAQ</h2></div>
         <div class="faq-grid">
           <article class="faq-item"><h3><button type="button" aria-expanded="false" aria-controls="faq-a" data-faq-trigger>What should be included in a quote request?<span aria-hidden="true" data-faq-icon>+</span></button></h3><div id="faq-a" class="faq-panel" hidden><p>Include product category, quantity or scope, organization type, and preferred response method for clearer follow-up.</p></div></article>
           <article class="faq-item"><h3><button type="button" aria-expanded="false" aria-controls="faq-b" data-faq-trigger>Do you support government procurement?<span aria-hidden="true" data-faq-icon>+</span></button></h3><div id="faq-b" class="faq-panel" hidden><p>Yes. Prymm Enterprises supports both private organizations and government institutions.</p></div></article>
-          <article class="faq-item"><h3><button type="button" aria-expanded="false" aria-controls="faq-c" data-faq-trigger>How will responses be provided?<span aria-hidden="true" data-faq-icon>+</span></button></h3><div id="faq-c" class="faq-panel" hidden><p>You can choose email or phone in the form. Response timing depends on request scope and clarification requirements.</p></div></article>
+          <article class="faq-item"><h3><button type="button" aria-expanded="false" aria-controls="faq-c" data-faq-trigger>How are responses provided?<span aria-hidden="true" data-faq-icon>+</span></button></h3><div id="faq-c" class="faq-panel" hidden><p>You can choose email or phone in the form. Response timing depends on request scope and clarification requirements.</p></div></article>
         </div>
       </div>
     </section>
 
-    <section class="section contact-sec" id="contact">
+    <section class="section contact" id="contact">
       <div class="container">
-        <div class="section-head"><div class="section-index">07</div><h2>Final CTA · Contact and Request a Quote</h2></div>
-        <p class="section-intro">Share your procurement requirement through your preferred channel, or use the structured form for faster qualification.</p>
+        <div class="section-header">
+          <div class="section-index">06</div>
+          <h2>Final CTA · Contact &amp; Request a Quote</h2>
+        </div>
+        <p class="section-intro">Send your requirement through your preferred channel or use the structured inquiry form for immediate qualification details.</p>
+
         <div class="contact-grid">
           <article class="contact-card"><p class="contact-card-label">Website</p><p class="contact-card-value"><a href="https://www.prymm.enterprises" target="_blank" rel="noopener noreferrer" data-contact-click="website">www.prymm.enterprises</a></p></article>
           <article class="contact-card"><p class="contact-card-label">Email</p><p class="contact-card-value"><a href="mailto:info@prymm.enterprises" data-contact-click="email">info@prymm.enterprises</a></p></article>
           <article class="contact-card"><p class="contact-card-label">Phone</p><p class="contact-card-value"><a href="tel:+639524669089" data-contact-click="phone">0952-466-9089</a></p></article>
         </div>
+
         <div class="contact-cta-row">
           <a class="btn btn-primary" href="mailto:info@prymm.enterprises?subject=Request%20for%20Quote%20-%20Prymm%20Enterprises" data-contact-intent="quote-email">Email a Quote Request</a>
           <a class="btn" href="tel:+639524669089" data-contact-intent="quote-call">Call for Urgent Inquiries</a>
@@ -413,9 +466,7 @@
         menuBtn.setAttribute('aria-label', 'Open menu');
         if (restoreFocus && menuPreviousFocus && typeof menuPreviousFocus.focus === 'function') menuPreviousFocus.focus();
       }
-      if (menuBtn) {
-        menuBtn.addEventListener('click', () => menu.hidden ? openMenu() : closeMenu(true));
-      }
+      if (menuBtn) menuBtn.addEventListener('click', () => menu.hidden ? openMenu() : closeMenu(true));
       if (menu) {
         menu.addEventListener('keydown', (event) => {
           if (event.key === 'Escape') closeMenu(true);
@@ -435,7 +486,7 @@
       document.querySelectorAll('.nav-panel a').forEach(link => link.addEventListener('click', () => closeMenu(false)));
       window.addEventListener('resize', () => { if (window.innerWidth >= 1280) closeMenu(false); });
 
-      const sectionIds = ['products','industries','procurement','projects','resources','faq','contact'];
+      const sectionIds = ['products','industries','procurement','projects','faq','contact'];
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (!entry.isIntersecting) return;
