@@ -28,25 +28,25 @@ To avoid defaulting to any preferred style, the redesign style was selected usin
 - `sitemap.xml` - sitemap for the canonical homepage
 - `CNAME` - custom domain configuration
 
-## Design System (Professional, Corporate, Vibrant)
-- Visual direction: **Geometric Minimal Grid** with corporate clarity and energetic restraint.
-- Foundation: disciplined neutral surfaces with strategic vibrant accents:
+## Design System (Corporate Minimalist)
+- Visual direction: refined corporate-minimalist presentation of the merged single-page layout.
+- Foundation: disciplined neutral surfaces with one primary accent and restrained secondary sector accents:
   - Primary accent: `#0b5fe9`
-  - Secondary accent: `#00b8a9`
-  - Support accent: `#ff7a18`
+  - Secondary accent: `#2c8f84`
+  - Support accent: `#a86822`
 - Typography roles:
   - Display: Cabinet Grotesk (headings)
   - Body: Satoshi/Inter fallback stack
 - Narrative flow: arrival → capability → sectors → process → proof/resources → final CTA.
-- Motion: purposeful micro-interactions only; fully disabled with `prefers-reduced-motion`.
+- Motion: precise micro-interactions only; fully disabled with `prefers-reduced-motion`.
 - Themes: light and dark modes via `data-theme` toggle.
 
-## Premium + Vibrant Refinement Layer
-- Refined typography rhythm: tighter heading cadence, elevated spacing rhythm, and stronger section punctuation.
-- Surface hierarchy: deeper premium shadows, polished borders, and accent-led top-edge detailing on capability/proof cards.
-- Vibrancy strategy: controlled cobalt/teal/amber moments applied by section (`data-tone`) for contrast without visual clutter.
-- CTA uplift: stronger gradient and depth treatment for primary actions while keeping form/contact trust cues clear.
-- Interaction polish: hover/active transitions tuned with restrained easing, preserving keyboard visibility and reduced-motion behavior.
+## Corporate-Minimalist Refinement Notes
+- Reduced decorative gradients and ornamental geometry to improve scan speed and trust-oriented clarity.
+- Simplified card/panel treatments with consistent alignment, lighter shadows, and cleaner section rhythm.
+- Preserved high-contrast CTA emphasis while keeping accent usage disciplined.
+- Maintained one-page narrative order from hero through capabilities, sectors, process, proof, FAQ, and final contact/quote action.
+- Preserved accessibility behaviors (focus visibility, keyboard navigation, touch targets, reduced-motion support, form errors/status, FAQ semantics).
 
 ## Editable Content Areas
 Look for **"Editable content placeholder"** text in `index.html`. Replace only with verified business facts:
@@ -98,6 +98,7 @@ Look for **"Editable content placeholder"** text in `index.html`. Replace only w
 - Static integrity check: Python `html.parser` parse + internal anchor target check for `index.html`
 - Inline JS syntax check: `node --check` against extracted inline script
 - Responsive QA pass: reviewed 375px, 768px, and 1280px layouts for no horizontal overflow and stable section rhythm
+- CI status check: reviewed recent GitHub Actions workflow runs and confirmed no failed jobs in the latest Pages deployment run.
 
 ## Analytics Configuration
 The site emits privacy-conscious `dataLayer` events only:
