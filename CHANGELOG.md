@@ -1,6 +1,15 @@
 # Changelog
 
 ## 2026-08-08
+- Refined visual hierarchy and narrative flow in `index.html` to better emphasize arrival impact, capability orientation, trust signals, and quote CTA continuity.
+- Tightened palette usage toward charcoal/graphite/steel/warm off-white with controlled cobalt/amber emphasis.
+- Updated section messaging to reinforce professional, corporate, and high-energy tone without adding unverified business claims.
+- Improved accessibility details:
+  - FAQ toggle indicators now update on expand/collapse
+  - Form controls include explicit `aria-describedby` wiring for field-level error feedback
+  - Radio response options now meet touch-target intent with dedicated layout treatment
+- Refined interaction behavior to feel snappier and purposeful while preserving reduced-motion handling.
+- Added repository validation notes to `README.md` and recorded static integrity checks (`html.parser` anchor verification + `node --check` on inline JS).
 - Refactored `index.html` into a maintainable, section-based single static entry point while preserving Neo-Geo visual identity.
 - Added responsive desktop/mobile navigation with:
   - active section state

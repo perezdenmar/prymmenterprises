@@ -26,6 +26,12 @@ These are intentionally marked to be replaced only with verified data:
 - Case studies and outcomes
 - Company profile download link target
 
+## Refinement Notes (Professional / Corporate / Vibrant)
+- Palette discipline uses charcoal/graphite/warm off-white/steel as the base with cobalt/amber used for action and wayfinding emphasis.
+- Hero and mid-page trust narrative were refined without changing verified business facts.
+- Company profile remains clearly marked as a placeholder until an approved file is available.
+- Interactions remain purposeful and lightweight with reduced-motion support preserved.
+
 ## Contact Details (Preserved)
 - Website: `https://www.prymm.enterprises`
 - Email: `info@prymm.enterprises`
@@ -54,6 +60,10 @@ The quote/inquiry form is static-only and GitHub Pages compatible:
 - [ ] Verify preconnect + limited font weights are used
 - [ ] Verify no layout shift from interactive UI changes
 - [ ] Validate page remains lightweight and static-host friendly
+
+## Validation Steps Used In This Repository
+- Static integrity check: Python `html.parser` parse + internal anchor target check for `index.html`
+- Inline JS syntax check: `node --check` against extracted inline script
 
 ## Analytics Configuration
 The site emits privacy-conscious `dataLayer` events only:
