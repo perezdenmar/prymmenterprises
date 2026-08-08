@@ -3,28 +3,42 @@
 ## Overview
 This repository hosts the static GitHub Pages site for Prymm Enterprises as one cohesive, single-scrolling landing page.
 
+## Randomized Style Selection (Required)
+To avoid defaulting to any preferred style, the redesign style was selected using cryptographically secure random choice:
+- Method: `python` + `secrets.randbelow()` over the supplied shortlist
+- Candidate order used:
+  1. Swiss International Corporate
+  2. Contemporary Corporate Gradient
+  3. Geometric Minimal Grid
+  4. Editorial Tech Modern
+  5. Neo-Brutalism
+- Random output: **index 2 → Geometric Minimal Grid**
+- Rationale: this style best supports a professional corporate foundation with vibrant but controlled accents, strong hierarchy, and clear section-by-section procurement storytelling.
+
 ## Site Structure
 - `index.html` - single-page experience composed as:
-  - Statement (hero)
-  - Explanation (category coverage)
-  - Value (industry alignment + procurement process)
-  - Proof (trust signals + resources)
-  - Action (FAQ + contact/request-a-quote)
+  - High-impact arrival (hero)
+  - Capability coverage (product categories)
+  - Sector alignment
+  - Procurement workflow
+  - Proof and resources
+  - FAQ and final contact / request-a-quote action
 - `404.html` - custom not-found page with homepage and contact links
 - `robots.txt` - crawler instructions
 - `sitemap.xml` - sitemap for the canonical homepage
 - `CNAME` - custom domain configuration
 
-## Modernist Design System
-- Direction: calm, authoritative, disciplined, and functional.
-- Foundation: neutral architectural surfaces with two controlled accents:
-  - Primary accent: `#3158f5`
-  - Secondary accent: `#d67b11`
+## Design System (Professional, Corporate, Vibrant)
+- Visual direction: **Geometric Minimal Grid** with corporate clarity and energetic restraint.
+- Foundation: disciplined neutral surfaces with strategic vibrant accents:
+  - Primary accent: `#0d6efd`
+  - Secondary accent: `#00b8a9`
+  - Support accent: `#ff7a18`
 - Typography roles:
   - Display: Cabinet Grotesk (headings)
   - Body: Satoshi/Inter fallback stack
-- Layout: generous whitespace, measured cards, subtle grid overlay, restrained asymmetry.
-- Motion: subtle hover/focus transitions only; full reduced-motion support via `prefers-reduced-motion`.
+- Narrative flow: arrival → capability → sectors → process → proof/resources → final CTA.
+- Motion: purposeful micro-interactions only; fully disabled with `prefers-reduced-motion`.
 - Themes: light and dark modes via `data-theme` toggle.
 
 ## Editable Content Areas
@@ -34,12 +48,13 @@ Look for **"Editable content placeholder"** text in `index.html`. Replace only w
 - Case studies and measurable outcomes
 - Company profile download link target
 
-## Breakpoints
+## Responsive Rules
 - Mobile-first baseline: 375px+
 - Tablet: `@media (min-width: 768px)`
 - Desktop: `@media (min-width: 1280px)`
+- Must remain one cohesive scrolling page without horizontal overflow.
 
-## Interaction Rules
+## Interaction Behavior
 - Sticky header with desktop and accessible mobile navigation.
 - Mobile menu supports:
   - `aria-expanded`
@@ -69,7 +84,8 @@ Look for **"Editable content placeholder"** text in `index.html`. Replace only w
 - [ ] Touch targets are at least 44px
 - [ ] Reduced-motion preference is respected
 - [ ] No horizontal overflow at 375px / 768px / 1280px
-- [ ] No visible layout shift during interactions/theme toggles
+- [ ] Internal anchors map to existing section IDs
+- [ ] Contact links (`https`, `mailto`, `tel`) and quote fallback behavior work
 
 ## Validation Steps Used In This Repository
 - Static integrity check: Python `html.parser` parse + internal anchor target check for `index.html`
