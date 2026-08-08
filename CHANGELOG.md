@@ -1,0 +1,40 @@
+# Changelog
+
+## 2026-08-08
+- Refactored `index.html` into a maintainable, section-based single static entry point while preserving Neo-Geo visual identity.
+- Added responsive desktop/mobile navigation with:
+  - active section state
+  - accessible menu behavior
+  - keyboard focus handling
+  - Escape-to-close and focus return
+  - consistent Contact and Request a Quote CTAs
+- Added intent-based contact actions and preserved working website, email, and telephone links.
+- Added static Request a Quote / inquiry form with required fields for:
+  - name
+  - organization
+  - email
+  - phone
+  - customer type
+  - product category
+  - quantity/scope
+  - preferred response method
+  - message
+- Added inline validation, `aria-live` feedback, honeypot field, success message, and mailto fallback behavior.
+- Added future-ready sections for:
+  - Products/Catalog
+  - Industries/Solutions
+  - Procurement Process
+  - FAQ
+  - Resources/Company Profile
+  - Projects/Case Studies
+- Marked unknown factual areas with editable placeholders.
+- Added SEO/share improvements:
+  - canonical URL
+  - Open Graph/Twitter metadata
+  - Organization + WebSite JSON-LD structured data
+  - `robots.txt`
+  - `sitemap.xml`
+- Added custom `404.html` with links back to homepage and contact section.
+- Added WCAG-oriented accessibility improvements: skip link, semantic sections/headings, focus visibility, keyboard support, error messaging, reduced motion support, accessible FAQ accordion, and practical 44px targets.
+- Added privacy-conscious analytics hooks via `window.dataLayer` events for menu, contact, form, product interest, profile download placeholder, and FAQ interactions.
+- Added `README.md` documenting structure, editable areas, deployment/domain notes, QA checklists, and analytics setup.
