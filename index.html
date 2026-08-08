@@ -30,7 +30,7 @@
       --text-xl:clamp(1.5rem,1.15rem + 1.3vw,2.25rem);
       --text-2xl:clamp(2.2rem,1.6rem + 2.8vw,4rem);
       --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;
-      --ink:#0b0d17;--paper:#f4f1ea;--paper-2:#ece6d9;--paper-3:#e3dccd;--cobalt:#1d3ff2;--gold:#e6a417;--coral:#ff5d3d;--teal:#00b3a4;
+      --ink:#0b0d17;--paper:#f4f1ea;--paper-2:#ece6d9;--paper-3:#ddd6c8;--graphite:#1d2433;--steel:#627085;--cobalt:#1d3ff2;--gold:#e6a417;
       --line:rgba(11,13,23,.14);--line-strong:#0b0d17;--text:#0b0d17;--text-muted:#343b4f;--text-inverse:#f4f1ea;
       --surface:#fff;--surface-dark:#111421;--shadow-sm:0 8px 24px rgba(11,13,23,.08);--shadow-md:0 18px 48px rgba(11,13,23,.12);
       --radius:1rem;--radius-sm:.75rem;--max:1200px;--header-h:78px;
@@ -42,8 +42,8 @@
     a,button,input,textarea,select{-webkit-tap-highlight-color:transparent}
     button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
     a{text-decoration:none;color:inherit}
-    p{max-width:72ch;color:var(--text-muted)}
-    h1,h2,h3,h4{font-family:var(--font-display);line-height:1;text-transform:uppercase;letter-spacing:-.03em}
+    p{max-width:72ch;color:var(--text-muted);overflow-wrap:anywhere}
+    h1,h2,h3,h4{font-family:var(--font-display);line-height:1.05;text-transform:uppercase;letter-spacing:-.02em;font-weight:700;text-wrap:balance}
     :focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:var(--radius-sm)}
     .skip-link{position:absolute;left:var(--space-4);top:-120px;background:var(--cobalt);color:#fff;padding:var(--space-3) var(--space-4);z-index:1000;border-radius:var(--radius-sm);font-weight:700}
     .skip-link:focus{top:var(--space-4)}
@@ -70,7 +70,7 @@
     .nav-cta.primary{background:var(--ink);color:var(--text-inverse)}
     .hero{min-height:calc(100dvh - var(--header-h));display:flex;align-items:center}
     .hero-grid{display:grid;gap:var(--space-8)}
-    .tag{display:inline-flex;align-items:center;padding:var(--space-2) var(--space-4);font-size:var(--text-xs);font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--gold);border:2px solid var(--line-strong);margin-bottom:var(--space-6)}
+    .tag{display:inline-flex;align-items:center;padding:var(--space-2) var(--space-4);font-size:var(--text-xs);font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--paper-2);border:2px solid var(--line-strong);box-shadow:inset .35rem 0 0 var(--gold);margin-bottom:var(--space-6)}
     .hero h1{font-size:var(--text-2xl);max-width:14ch}
     .accent{color:var(--cobalt)}
     .hero-actions,.contact-cta-row{display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-6)}
@@ -78,7 +78,9 @@
     .btn-primary{background:var(--ink);color:var(--text-inverse)}
     .btn-secondary{background:var(--surface)}
     .hero-visual{min-height:320px;border:2px solid var(--line-strong);background:linear-gradient(180deg,var(--paper-2),var(--paper-3));position:relative;overflow:hidden;border-radius:var(--radius);box-shadow:var(--shadow-md)}
-    .geo-card{position:absolute;border:2px solid var(--line-strong)} .geo-a{inset:12% 48% 42% 8%;background:var(--cobalt)} .geo-b{inset:26% 12% 20% 54%;background:var(--gold)} .geo-c{width:120px;height:120px;border-radius:50%;background:var(--teal);bottom:10%;left:12%} .geo-d{width:0;height:0;border-left:72px solid transparent;border-right:72px solid transparent;border-bottom:128px solid var(--coral);top:12%;right:12%;border-top:none}
+    .geo-card{position:absolute;border:2px solid var(--line-strong)} .geo-a{inset:12% 48% 42% 8%;background:var(--graphite)} .geo-b{inset:26% 12% 20% 54%;background:var(--steel)} .geo-c{width:120px;height:120px;border-radius:50%;background:var(--cobalt);bottom:10%;left:12%} .geo-d{width:0;height:0;border-left:72px solid transparent;border-right:72px solid transparent;border-bottom:128px solid var(--gold);top:12%;right:12%;border-top:none}
+    .proof-strip{list-style:none;display:grid;gap:var(--space-3);margin-top:var(--space-6)}
+    .proof-strip li{border:2px solid var(--line-strong);background:var(--surface);padding:var(--space-3) var(--space-4);font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
     .sec-label{display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-6)}
     .num-box{width:48px;height:48px;display:grid;place-items:center;background:var(--ink);color:var(--text-inverse);font-family:var(--font-display);font-weight:700}
     .sec-label h2{font-size:var(--text-xl)}
@@ -87,23 +89,25 @@
     .card,.stack-item,.faq-item,.contact-card,.form-card{border:2px solid var(--line-strong);background:var(--surface);border-radius:var(--radius);padding:var(--space-5);box-shadow:var(--shadow-sm)}
     .card h3,.stack-item h3{font-size:var(--text-lg);margin-bottom:var(--space-2)}
     .small{font-size:var(--text-sm)}
-    .products{background:var(--cobalt)} .products .sec-label h2,.products .section-intro,.products h3,.products p,.products .placeholder{color:#f7f8ff} .products .num-box{background:var(--gold);color:#0b0d17} .products .card{background:rgba(255,255,255,.07)}
+    .products{background:linear-gradient(165deg,var(--graphite),#2a3142)} .products .sec-label h2,.products .section-intro,.products h3,.products p,.products .placeholder{color:#f7f8ff} .products .num-box{background:var(--gold);color:#0b0d17} .products .card{background:rgba(255,255,255,.06)}
     .placeholder{font-size:var(--text-xs);font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.9;margin-top:var(--space-3)}
     .faq-item button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:var(--space-3);font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-align:left;min-height:44px}
     .faq-item .faq-panel{padding-top:var(--space-3)}
     .faq-item [hidden]{display:none !important}
     .contact-sec{background:var(--surface-dark);color:var(--text-inverse)}
     .contact-sec p,.contact-sec .sec-label h2,.contact-sec h3,.contact-sec label,.contact-sec legend{color:var(--text-inverse)}
-    .contact-sec .num-box{background:var(--teal);color:#0b0d17}
+    .contact-sec .num-box{background:var(--gold);color:#0b0d17}
     .contact-grid{display:grid;gap:var(--space-4);margin-bottom:var(--space-8)}
     .contact-card{background:rgba(255,255,255,.04);border-color:rgba(244,241,234,.24)}
-    .contact-card-label{font-size:var(--text-xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+    .contact-card-label{font-size:var(--text-xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
     .contact-card-value a{text-decoration:underline;text-underline-offset:3px;word-break:break-word}
     .form-grid{display:grid;gap:var(--space-4)}
     .form-card{background:rgba(255,255,255,.05);border-color:rgba(244,241,234,.26)}
     .field{display:grid;gap:var(--space-2)}
     .field input,.field select,.field textarea{min-height:44px;border:2px solid rgba(244,241,234,.4);background:#fff;color:#0b0d17;padding:var(--space-2) var(--space-3);border-radius:var(--radius-sm);font:inherit}
     .field textarea{min-height:132px;resize:vertical}
+    .fieldset-options{display:grid;gap:var(--space-2)}
+    .fieldset-options label{min-height:44px;display:inline-flex;align-items:center;gap:var(--space-2)}
     .field .hint,.feedback{font-size:var(--text-xs)}
     .error{color:#ffd7ce;font-size:var(--text-xs);font-weight:700}
     .hidden-honeypot{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
@@ -114,6 +118,7 @@
     @media (min-width:700px){
       .container{width:min(calc(100% - 2*var(--space-6)),var(--max))}
       .hero-actions,.contact-cta-row{flex-direction:row;flex-wrap:wrap}
+      .proof-strip{grid-template-columns:repeat(3,minmax(0,1fr))}
       .card-grid,.stack-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
       .contact-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
       .form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -129,9 +134,11 @@
       .card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
     }
     @media (hover:hover){
-      .btn:hover,.theme-toggle:hover,.menu-toggle:hover,.nav-link:hover,.nav-cta:hover,.desktop-nav a:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-md)}
-      .card:hover,.stack-item:hover,.faq-item:hover,.contact-card:hover,.form-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+      .btn,.theme-toggle,.menu-toggle,.nav-link,.nav-cta,.desktop-nav a,.card,.stack-item,.faq-item,.contact-card,.form-card{transition:transform .16s cubic-bezier(.2,.8,.2,1),box-shadow .16s ease}
+      .btn:hover,.theme-toggle:hover,.menu-toggle:hover,.nav-link:hover,.nav-cta:hover,.desktop-nav a:hover{transform:translate(-1px,-1px);box-shadow:var(--shadow-md)}
+      .card:hover,.stack-item:hover,.faq-item:hover,.contact-card:hover,.form-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
     }
+    @media (max-width:420px){.brand-sub{display:none}}
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none !important;transition:none !important}}
   </style>
   <script type="application/ld+json">
@@ -204,11 +211,16 @@
         <div>
           <span class="tag">Established 2017 · Institutional Supply Support</span>
           <h1>Precision distribution for <span class="accent">industry</span> and institutions.</h1>
-          <p class="section-intro">Prymm Enterprises imports and distributes heavy equipment, agricultural machinery, medical instruments, electronics, and wholesale essentials for private organizations and government institutions.</p>
+          <p class="section-intro">Prymm Enterprises supports procurement with disciplined sourcing, clear communication, and reliable category coverage across heavy equipment, agriculture, medical instruments, electronics, and wholesale essentials for private organizations and government institutions.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#quote" data-contact-intent="quote">Request a Quote</a>
             <a class="btn btn-secondary" href="#products">Browse Categories</a>
           </div>
+          <ul class="proof-strip" aria-label="Trust highlights">
+            <li>Established 2017</li>
+            <li>Importer · Distributor · Wholesaler</li>
+            <li>Private + Government Supply Support</li>
+          </ul>
         </div>
         <div class="hero-visual" aria-hidden="true">
           <div class="geo-card geo-a"></div><div class="geo-card geo-b"></div><div class="geo-card geo-c"></div><div class="geo-card geo-d"></div>
@@ -219,7 +231,7 @@
     <section class="section products" id="products">
       <div class="container">
         <div class="sec-label"><div class="num-box">01</div><h2>Products &amp; Catalog</h2></div>
-        <p class="section-intro">Core categories currently supplied by Prymm Enterprises.</p>
+        <p class="section-intro">Core sectors structured for operational continuity, technical precision, and institutional procurement readiness.</p>
         <div class="card-grid">
           <article class="card" data-interest="heavy-equipment"><h3>Heavy Equipment</h3><p>Distribution support for operational and industrial demand.</p></article>
           <article class="card" data-interest="agri-machinery"><h3>Agricultural Machinery</h3><p>Equipment categories supporting continuity and field-ready operations.</p></article>
@@ -235,7 +247,7 @@
     <section class="section" id="industries">
       <div class="container">
         <div class="sec-label"><div class="num-box">02</div><h2>Industries &amp; Solutions</h2></div>
-        <p class="section-intro">Solutions designed for both private sector and government procurement environments.</p>
+        <p class="section-intro">Capability orientation for organizations that require reliable coordination from inquiry through category alignment.</p>
         <div class="stack-grid">
           <article class="stack-item"><h3>Government Institutions</h3><p>Professional procurement support with accountable communication and documentation readiness.</p></article>
           <article class="stack-item"><h3>Private Organizations</h3><p>Flexible category sourcing and scalable distribution support for operational continuity.</p></article>
@@ -260,10 +272,11 @@
 
     <section class="section" id="projects">
       <div class="container">
-        <div class="sec-label"><div class="num-box">04</div><h2>Projects &amp; Case Studies</h2></div>
+        <div class="sec-label"><div class="num-box">04</div><h2>Trust &amp; Delivery Confidence</h2></div>
         <div class="stack-grid">
-          <article class="stack-item"><h3>Institutional Supply Program</h3><p class="small">Placeholder summary for a verified future case study.</p><p class="placeholder">Editable content placeholder: add project name, timeline, and measurable outcomes after verification.</p></article>
-          <article class="stack-item"><h3>Multi-Category Distribution Engagement</h3><p class="small">Placeholder summary for a verified future case study.</p><p class="placeholder">Editable content placeholder: add client-approved details only.</p></article>
+          <article class="stack-item"><h3>Operational Credibility</h3><p class="small">Prymm Enterprises has operated since 2017 as an importer, distributor, and wholesaler focused on accountable execution.</p></article>
+          <article class="stack-item"><h3>Document-Ready Procurement Support</h3><p class="small">The quote workflow captures scope, category, response preference, and clarification notes to support structured follow-up.</p></article>
+          <article class="stack-item"><h3>Case Study Archive (Placeholder)</h3><p class="small">Placeholder summary for verified future case studies.</p><p class="placeholder">Editable content placeholder: add project names, timelines, and measurable outcomes only after approval.</p></article>
         </div>
       </div>
     </section>
@@ -284,9 +297,9 @@
       <div class="container">
         <div class="sec-label"><div class="num-box">06</div><h2>FAQ</h2></div>
         <div class="faq-grid">
-          <article class="faq-item"><h3><button type="button" aria-expanded="false" aria-controls="faq-a" data-faq-trigger>What details should I include in a quote request?<span aria-hidden="true">+</span></button></h3><div id="faq-a" class="faq-panel" hidden><p>Include product category, quantity or scope, organization type, and preferred response method for faster follow-up.</p></div></article>
-          <article class="faq-item"><h3><button type="button" aria-expanded="false" aria-controls="faq-b" data-faq-trigger>Can Prymm Enterprises support government procurement?<span aria-hidden="true">+</span></button></h3><div id="faq-b" class="faq-panel" hidden><p>Yes. Prymm Enterprises serves both private organizations and government institutions.</p></div></article>
-          <article class="faq-item"><h3><button type="button" aria-expanded="false" aria-controls="faq-c" data-faq-trigger>How will I receive a response?<span aria-hidden="true">+</span></button></h3><div id="faq-c" class="faq-panel" hidden><p>You can choose email or phone in the inquiry form. Response timing depends on scope and clarification needs.</p></div></article>
+          <article class="faq-item"><h3><button type="button" aria-expanded="false" aria-controls="faq-a" data-faq-trigger>What details should I include in a quote request?<span aria-hidden="true" data-faq-icon>+</span></button></h3><div id="faq-a" class="faq-panel" hidden><p>Include product category, quantity or scope, organization type, and preferred response method for faster follow-up.</p></div></article>
+          <article class="faq-item"><h3><button type="button" aria-expanded="false" aria-controls="faq-b" data-faq-trigger>Can Prymm Enterprises support government procurement?<span aria-hidden="true" data-faq-icon>+</span></button></h3><div id="faq-b" class="faq-panel" hidden><p>Yes. Prymm Enterprises serves both private organizations and government institutions.</p></div></article>
+          <article class="faq-item"><h3><button type="button" aria-expanded="false" aria-controls="faq-c" data-faq-trigger>How will I receive a response?<span aria-hidden="true" data-faq-icon>+</span></button></h3><div id="faq-c" class="faq-panel" hidden><p>You can choose email or phone in the inquiry form. Response timing depends on scope and clarification needs.</p></div></article>
         </div>
       </div>
     </section>
@@ -314,16 +327,16 @@
               <input id="company-website" name="companyWebsite" type="text" autocomplete="off" tabindex="-1">
             </div>
             <div class="form-grid">
-              <div class="field"><label for="name">Full name *</label><input id="name" name="name" required autocomplete="name"><p class="error" id="name-error"></p></div>
-              <div class="field"><label for="organization">Organization *</label><input id="organization" name="organization" required autocomplete="organization"><p class="error" id="organization-error"></p></div>
-              <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email"><p class="error" id="email-error"></p></div>
-              <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel"><p class="error" id="phone-error"></p></div>
-              <div class="field"><label for="customer-type">Customer type *</label><select id="customer-type" name="customerType" required><option value="">Select one</option><option>Government institution</option><option>Private organization</option><option>Other</option></select><p class="error" id="customer-type-error"></p></div>
-              <div class="field"><label for="product-category">Product category *</label><select id="product-category" name="productCategory" required><option value="">Select one</option><option>Heavy Equipment</option><option>Agricultural Machinery</option><option>Medical Instruments</option><option>Digital Goods &amp; Electronics</option><option>Office &amp; Wholesale Essentials</option><option>Professional Sound Systems</option><option>Other</option></select><p class="error" id="product-category-error"></p></div>
-              <div class="field"><label for="quantity-scope">Quantity / Scope *</label><input id="quantity-scope" name="quantityScope" required><p class="error" id="quantity-scope-error"></p></div>
-              <fieldset class="field"><legend>Preferred response method *</legend><div><label><input type="radio" name="responseMethod" value="Email" required> Email</label></div><div><label><input type="radio" name="responseMethod" value="Phone" required> Phone</label></div><p class="error" id="responseMethod-error"></p></fieldset>
+              <div class="field"><label for="name">Full name *</label><input id="name" name="name" required autocomplete="name" aria-describedby="name-error"><p class="error" id="name-error"></p></div>
+              <div class="field"><label for="organization">Organization *</label><input id="organization" name="organization" required autocomplete="organization" aria-describedby="organization-error"><p class="error" id="organization-error"></p></div>
+              <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email" aria-describedby="email-error"><p class="error" id="email-error"></p></div>
+              <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-error"><p class="error" id="phone-error"></p></div>
+              <div class="field"><label for="customer-type">Customer type *</label><select id="customer-type" name="customerType" required aria-describedby="customer-type-error"><option value="">Select one</option><option>Government institution</option><option>Private organization</option><option>Other</option></select><p class="error" id="customer-type-error"></p></div>
+              <div class="field"><label for="product-category">Product category *</label><select id="product-category" name="productCategory" required aria-describedby="product-category-error"><option value="">Select one</option><option>Heavy Equipment</option><option>Agricultural Machinery</option><option>Medical Instruments</option><option>Digital Goods &amp; Electronics</option><option>Office &amp; Wholesale Essentials</option><option>Professional Sound Systems</option><option>Other</option></select><p class="error" id="product-category-error"></p></div>
+              <div class="field"><label for="quantity-scope">Quantity / Scope *</label><input id="quantity-scope" name="quantityScope" required aria-describedby="quantity-scope-error"><p class="error" id="quantity-scope-error"></p></div>
+              <fieldset class="field"><legend>Preferred response method *</legend><div class="fieldset-options"><label><input type="radio" name="responseMethod" value="Email" required> Email</label><label><input type="radio" name="responseMethod" value="Phone" required> Phone</label></div><p class="error" id="responseMethod-error"></p></fieldset>
             </div>
-            <div class="field" style="margin-top:var(--space-4)"><label for="message">Message *</label><textarea id="message" name="message" required></textarea><p class="hint">Please include key specifications, required timeline context, or special procurement notes.</p><p class="error" id="message-error"></p></div>
+            <div class="field" style="margin-top:var(--space-4)"><label for="message">Message *</label><textarea id="message" name="message" required aria-describedby="message-hint message-error"></textarea><p class="hint" id="message-hint">Please include key specifications, required timeline context, or special procurement notes.</p><p class="error" id="message-error"></p></div>
             <div class="contact-cta-row">
               <button class="btn btn-primary" type="submit">Submit Inquiry</button>
               <a class="btn btn-secondary" id="mailto-fallback" href="mailto:info@prymm.enterprises?subject=Request%20for%20Quote%20-%20Prymm%20Enterprises">Use Email Fallback</a>
@@ -437,9 +450,11 @@
       document.querySelectorAll('[data-faq-trigger]').forEach(btn => {
         btn.addEventListener('click', () => {
           const panel = document.getElementById(btn.getAttribute('aria-controls'));
+          const icon = btn.querySelector('[data-faq-icon]');
           const expanded = btn.getAttribute('aria-expanded') === 'true';
           btn.setAttribute('aria-expanded', String(!expanded));
           if (panel) panel.hidden = expanded;
+          if (icon) icon.textContent = expanded ? '+' : '−';
           pushEvent('faq_toggle', { question_id: btn.getAttribute('aria-controls'), expanded: !expanded });
         });
       });
@@ -474,11 +489,14 @@
         setError('quantity-scope', values.quantityScope ? '' : 'Quantity or scope is required.');
         setError('message', values.message ? '' : 'Message is required.');
         const responseError = document.getElementById('responseMethod-error');
+        const responseInputs = form.querySelectorAll('input[name="responseMethod"]');
         if (!values.responseMethod) {
           valid = false;
           responseError.textContent = 'Select a preferred response method.';
+          responseInputs.forEach(input => input.setAttribute('aria-invalid', 'true'));
         } else {
           responseError.textContent = '';
+          responseInputs.forEach(input => input.setAttribute('aria-invalid', 'false'));
         }
         form.querySelectorAll('.error').forEach(node => { if (node.textContent.trim() !== '') valid = false; });
         return { valid: valid, values: values };
