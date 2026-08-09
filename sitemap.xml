@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://prymm.enterprises/</loc></url>
-  <url><loc>https://prymm.enterprises/about.html</loc></url>
-  <url><loc>https://prymm.enterprises/products.html</loc></url>
-  <url><loc>https://prymm.enterprises/contact.html</loc></url>
+  <url><loc>https://prymm.enterprises/about/</loc></url>
+  <url><loc>https://prymm.enterprises/products/</loc></url>
+  <url><loc>https://prymm.enterprises/contact/</loc></url>
   <url><loc>https://prymm.enterprises/insights.html</loc></url>
   <url><loc>https://prymm.enterprises/journal.html</loc></url>
-  <url><loc>https://prymm.enterprises/sectors/industrial.html</loc></url>
-  <url><loc>https://prymm.enterprises/sectors/agricultural.html</loc></url>
-  <url><loc>https://prymm.enterprises/sectors/medical.html</loc></url>
-  <url><loc>https://prymm.enterprises/sectors/digital.html</loc></url>
+  <url><loc>https://prymm.enterprises/sectors/industrial/</loc></url>
+  <url><loc>https://prymm.enterprises/sectors/agricultural/</loc></url>
+  <url><loc>https://prymm.enterprises/sectors/medical/</loc></url>
+  <url><loc>https://prymm.enterprises/sectors/digital/</loc></url>
 </urlset>
